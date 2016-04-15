@@ -1,0 +1,2651 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 7 juil. 2015, 10:14:47
+    Author     : Nicolas
+*/
+a{
+    color: #9d9d9d;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+body{
+    background-color:#EDEDED;
+    color: rgba(0,121,175,1.0);
+    font-family:Calibri;
+}
+body > form{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 2.6em;
+    background-color: #EDEDED;
+}
+body > form hgroup{
+    width: 30%;
+    height: 22.3em;
+    margin: auto;
+    padding: 1.6em;
+    border-radius: 0.6em;
+    background-color: #FEFEFE;
+    box-shadow: 0.1em 0.1em 0.1em rgba(46,46,46,0.1);
+    -webkit-box-shadow: 0.1em 0.1em 0.1em rgba(46,46,46,0.1);
+    -moz-box-shadow: 0.1em 0.1em 0.1em rgba(46,46,46,0.1);
+    -ms-box-shadow: 0.1em 0.1em 0.1em rgba(46,46,46,0.1);
+    -o-box-shadow: 0.1em 0.1em 0.1em rgba(46,46,46,0.1);
+}
+body > form hgroup .notifErr{
+    color: crimson;
+}
+body > form hgroup .logo{
+    width: 40%;
+    margin: auto;
+    //border: solid 0.1em;
+}
+body > form hgroup img{
+    width: 100%;
+    margin: auto;
+    //border: solid 0.1em;
+}
+body > form hgroup fieldset{
+    width: 91%;
+    margin: auto;
+    margin: auto;
+}
+body > form fieldset label{}
+body > form fieldset .lab{
+    display: inline-block;
+    width: 30%;
+    text-align: right;
+    //border: solid 0.1em;
+}
+body > form fieldset input{
+    width: 66%;
+    height: 2.0em;
+    //border: 0;
+}
+body > form fieldset input[type='submit']{
+    float: right;
+    width: 30%;
+    margin: auto 0.5em;
+}
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    //border: solid 0.1em;
+}
+header hgroup{
+    float: left;
+    width: 100%;
+    height: 2.3em;
+    margin: auto;
+}
+header .m-menu{
+    position: relative;
+    background-color: rgba(46,46,46,1.0);
+}
+header .m-menu a{
+    color: rgba(0,121,175,1.0);
+}
+header .m-menu .h-menu ul {
+    height: 1.7em;
+    //border: solid 0.1em red;
+}
+header .m-menu .h-menu ul li{
+    float: left;
+    width: 5.6em;
+    height: auto;
+    //border: solid 0.1em;
+}
+header .m-menu .h-menu ul li ul{
+    float: left;
+    width: 23.0em;
+    height: auto;
+    margin: auto;
+    padding: 0.1em;
+    background-color: rgba(46,46,46,1.0);
+    border-radius: 0em 0em 0.4em 0em;
+    border-bottom:solid crimson 0.3em;
+    display: none;
+}
+header .m-menu .h-menu ul li ul li{
+    width: 40%;
+    border: solid 0.1em;
+}
+header .m-menu .h-menu ul li:hover ul{
+    display: block;
+}
+header .h-details{
+    width: 99.8%;
+    height: 1.6em;
+    margin: auto;
+    //border: solid 0.1em;
+}
+header .h-details .menu-fixed{
+    width: 16%;
+    margin: auto;
+    //border: solid 0.1em;
+}
+header .h-details #m-details{
+    float: right;
+    width: 83%;
+    height: 1.9em;
+    margin: 0.3em auto;
+    //border: solid 0.1em;
+}
+header .h-details #m-details ul{
+    width: 100%;
+    margin: auto;
+    //border: solid 0.1em;
+}
+header .h-details #m-details ul li{
+    width: auto;
+    margin: auto 0.1em;
+    padding-left:0.5em;
+    padding-right:0.5em;
+    border: solid 0.1em;
+    border-bottom: 0;
+}
+header .h-details .menu-fixed p{
+    float: left;
+    width: 3.0em;
+    margin: 0.4em 1.0em;
+    border-right: solid 0.1em;
+}
+header div{
+    display: inline-block;
+    width: 49%;
+    height: auto;
+    margin: 0.2em;
+    padding: 0.1em;
+    //border: solid red 0.1em;
+}
+header .h-user{
+    float: right;
+}
+header .h-user img{
+    float: right;
+    width: 30%;
+    margin: auto;
+    height: auto;
+}
+header .h-user ul .u-infos{
+  width: 60%;
+  text-align: right;
+  //border: solid red 0.1em;
+}
+header .h-user ul .u-bh{
+    width: 10%;
+}
+header .h-user ul li ul{
+    position: absolute;
+    top:3.0em;
+    right: 0;
+    width: 10.0em;
+    height: 2.8em;
+    margin: auto;
+    padding: 0.4em;
+    display: none;
+    background-color: aliceblue;
+    box-shadow: 0.1em 0.1em 0.1em rgba(46,46,46,0.3);
+    -webkit-box-shadow: 0.1em 0.1em 0.1em rgba(46,46,46,0.3);
+    -moz-box-shadow: 0.1em 0.1em 0.1em rgba(46,46,46,0.3);
+    -ms-box-shadow: 0.1em 0.1em 0.1em rgba(46,46,46,0.3);
+    -o-box-shadow: 0.1em 0.1em 0.1em rgba(46,46,46,0.3);
+}
+header .h-user ul li ul:before{
+    position: absolute;
+    z-index: 30;
+    top:-0.5em;
+    right: 1.6em;
+    width: 1%;
+    content: '';
+    border-right: 0.4em solid transparent;
+    border-left: 0.4em solid transparent;
+    border-bottom: 0.6em aliceblue solid;
+    display: block;
+}
+header .h-user ul li ul li{
+    float: left;
+    width: auto;
+    margin: 0.1em;
+}
+header div ul{
+    width: 100%;
+    margin: auto;
+    padding: 0;
+    //border: solid  0.1em;
+}
+header div ul li{
+    display: inline-block;
+    width: auto;
+    margin: 0.3em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    //border: solid 0.1em blueviolet;
+}
+header .h-user li{
+    float: right;
+    //border: solid 0.1em;
+}
+
+aside{
+    float: left;
+    width: 16%;
+    height: 46em;
+    margin: 4.3em -0.4em;
+    padding: 0;
+    //border: solid 0.1em;
+}
+aside hgroup{
+    width: 94.0%;
+    height: 44.6em;
+    margin: auto;
+    padding: 0.4em;
+    //border: solid 0.1em;
+}
+aside hgroup > ul{
+    float: left;
+    width: 95%;
+    height: auto;
+    margin: auto;
+    padding: 0.5em;
+    font-size: 1.1em;
+    //border: solid 0.1em;
+    list-style-type: none;
+}
+aside hgroup > ul li{
+    float: left;
+    width: 100%;
+    border-top: solid 0.1em rgba(46,46,46,0.1);
+}
+aside hgroup > ul li ul{
+    display: none;
+}
+aside hgroup a{
+    text-decoration: none;
+    color: darkgray;
+}
+//-------------------------------------------------------//
+//--------------- Bloc au milieu ------------------------//
+section{
+    //border: solid red 0.1em;
+}
+#wrapper .middle{
+    float: right;
+    width: 84%;
+    height: 100%;
+    margin: 3.5em -0.4em;
+    color: rgba(46,46,46,0.9);
+    //border: solid rgba(0,121,175,1.0) 0.1em;
+    //background-color: #e5b7d4;
+}
+#wrapper .middle hgroup{
+    width: 100%;
+    float: left;
+    background-color:rgba(176,207,193,0.8);
+}
+#wrapper .middle hgroup em input[type='submit']{
+    float: right;
+    width: 10%;
+    margin: auto;
+    border:0;
+}
+#wrapper .middle ul{
+    width: 100%;
+    height: 26.8em;
+    margin: auto;
+    padding: 0;
+    list-style-type: none;
+    background-color: #EDEDED;
+    overflow: auto;
+    //border: solid 0.1em;
+}
+#wrapper .middle ul li{
+    width: 99.0%;
+    padding: 0.1em;
+    //border: solid 0.1em;
+}
+#wrapper .middle ul li:nth-child(odd){
+    background-color: #FEFEFE;
+}
+#wrapper .middle ul li:hover{
+    background-color: indigo;
+    color: #FEFEFE;
+    cursor: pointer;
+}
+#wrapper .middle em{
+    display: inline-block;
+    width: 98%;
+    padding-left: 0.3em;
+    //border: solid 0.1em;
+}
+#wrapper .middle input{
+    width: 5%;
+    padding: 0.2em;
+    border: 0;
+}
+#wrapper .middle .list-ep{
+    float: left;
+    width: 94.1%;
+    height: 100%;
+    margin: auto;
+    padding: 1.8em;
+    background-color: #e5b7d4;
+    border: solid rgba(0,121,175,1.0) 0.1em;
+}
+#wrapper .middle .list-ep .b-liste{
+    width: 25%;
+}
+#wrapper .middle .list-ep .b-liste .act a{
+    color: #9d9d9d;
+}
+#wrapper .middle .list-ep .b-liste .desact a{
+    color: crimson;
+}
+#wrapper .middle .list-ep .b-filtre{
+    width: 69%;
+}
+#wrapper .middle .list-ep .b-filtre fieldset{
+    float: left;
+    width: 44.5%;
+    margin: 0.5em;
+}
+#wrapper .middle .list-ep .b-filtre div{
+    height: 11.0em;
+    overflow: auto;
+    //border: solid 0.1em;
+}
+#wrapper .middle .list-ep .b-filtre ul{
+    height: 11.0em;
+}
+#wrapper .middle .list-ep .b-filtre ul li{
+    width: 94%;
+}
+#wrapper .middle .list-ep fieldset{
+    float: left;
+    width: 49%;
+    height: auto;
+    margin: 0.3em;
+    padding: 0.4em;
+    //border: red solid 0.1em;
+}
+#wrapper .middle .list-ep .b-filtre .triple{
+    width: 30%;
+    padding: 0.1em;
+    border: 0;
+}
+#wrapper .middle .list-ep > input{
+    width: 10%;
+    margin: auto 2.6em;
+}
+#wrapper .middle .list-ep fieldset input{
+    width: 2.2em;
+    float: left;
+}
+#wrapper .middle .dte-maj{
+    float: right;
+    width: 10%;
+    background-color: #EDEDED;
+    color: indigo;
+    border: solid indigo 0.1em;
+}
+#wrapper .middle .new-part{
+    float: left;
+    width: 97.2%;
+    margin: auto;
+    padding: 0.3em;
+    background-color: #e5b7d4;
+    border: solid rgba(0,121,175,1.0) 0.1em;
+}
+#wrapper .middle .new-part .img-desact{
+    float: left;
+    width: 2.0em;
+    margin: -0.4em;
+}
+#wrapper .middle .new-part div{
+    float: left;
+    width: 97.6%;
+    margin: 0.2em 0.3em;
+    //border: solid 0.1em aqua;
+}
+#wrapper .middle .new-part div hgroup{
+    width: 37%;
+    margin: 0.2em;
+    padding: 1.5em;
+    background: none;
+    //border: solid 0.1em yellow;
+}
+#wrapper .middle .new-part input[type='submit']{
+    width: 15%;
+    box-shadow: 0.1em 0.1em 0.1em #333;
+    border: solid #EDEDED 0.1em;
+}
+#wrapper .middle .new-part .b-cordon{
+    //border: solid 0.1em;
+}
+#wrapper .middle .new-part .b-cordon > hgroup{
+    width: 100%;
+    margin: auto;
+    padding: 0;
+    //border: solid 0.1em;
+}
+#wrapper .middle .new-part .b-cordon > hgroup hgroup{
+    float: left;
+    margin: 0.2em;
+    padding: 0.3em;
+    //border: solid 0.1em;
+}
+#wrapper .middle .new-part .b-cordon > hgroup .b-fraude{
+    width: 18%;
+    height: 19.7em;
+    //border: solid 0.1em;
+}
+#wrapper .middle .new-part .b-cordon > hgroup .b-fraude p{
+    position: relative;
+    width: 22%;
+    height: 1.1em;
+    margin: auto;
+    padding: 0.1em;
+    border-radius: 0.9em;
+    border: solid #EDEDED 0.1em;
+    background-color: azure;
+}
+#wrapper .middle .new-part .b-cordon > hgroup .b-fraude p label{
+    position:absolute;
+    //display: inline-block;
+    width: 1.0em;
+    height: 1.0em;
+    border-radius: 50%;
+    border: solid #EDEDED 0.1em;
+}
+#wrapper .middle .new-part .b-cordon > hgroup .b-fraude p label:hover{
+    cursor:pointer;
+}
+#wrapper .middle .new-part .b-cordon > hgroup .b-fraude p #b-on{
+    left:0;
+    right: auto;
+    background-color: darkcyan;
+    box-shadow: 0.1em 0.1em 0.1em #9d9d9d;
+}
+#wrapper .middle .new-part .b-cordon > hgroup .b-fraude p #b-off{
+    right:0;
+    left: auto;
+    background-color: coral;
+    box-shadow: -0.1em 0.1em 0.1em #9d9d9d;
+}
+#wrapper .middle .new-part .b-cordon > hgroup .b-fraude img{
+    width: 100%;
+    height: 10.6em;
+    margin: 0.5em auto;
+    background-color: #FEFEFE;
+    border: solid #EDEDED 0.1em;
+}
+#wrapper .middle .new-part div hgroup fieldset{
+    width: 99%;
+    height: auto;
+    margin: 1.4em auto;
+    padding: 0.3em;
+    //border: 0;
+    //background-color: #FEFEFE;
+}
+#wrapper .middle .new-part div hgroup fieldset textarea{
+    float: left;
+    width: 98.0%;
+    height: 11.9em;
+    margin: auto;
+    padding: 0.3em;
+}
+#wrapper .middle .new-part div hgroup .liste-hist{
+    height:auto;
+    background-color: cornsilk;
+    border: solid #9d9d9d 0.1em;
+}
+#wrapper .middle .new-part div hgroup .liste-hist input{
+    float: none;
+    height: auto;
+}
+#wrapper .middle .new-part div hgroup .liste-hist ul{
+    float:right;
+    width: 50.6%;
+    height: 8.5em;
+    margin: auto;
+    background-color: cornsilk;
+    border:0;
+    overflow: hidden;
+}
+#wrapper .middle .new-part div hgroup .liste-hist ul input{
+    width: 2.0em;
+}
+#wrapper .middle .new-part .div-cont{
+    width: 97.6%;
+    height:auto;
+    margin: 0.1em 0.4em;
+    padding: 0;
+    font-size: 0.8em;
+    //background-color: antiquewhite;
+    //border: solid #9d9d9d 0.1em;
+}
+#wrapper .middle .new-part .div-cont hgroup{
+    width: 100%;
+    margin: auto;
+    padding: 0;
+    //border: solid 0.1em;
+}
+#wrapper .middle .new-part .div-cont .b-cont{
+    width: 30.1%;
+    height: auto;
+    margin: auto;
+    padding: 0.8em;
+    background-color:rgba(176,207,193,0.8);
+    border: solid #9d9d9d 0.1em;
+}
+#wrapper .middle .new-part .div-cont .cont-3{
+    float: right;
+}
+#wrapper .middle .new-part .div-cont .cont-2{
+    //float: none;
+    margin: auto 1.1em;
+}
+#wrapper .middle .new-part .div-cont .b-cont p{
+    height: 1.3em;
+    //border: solid 0.1em;
+}
+#wrapper .middle .new-part .div-cont .b-cont p input{
+    height: 1.1em;
+}
+#wrapper .middle .new-part .b-cont textarea{
+    width: 98%;
+    height: 6.4em;
+}
+#wrapper .middle .new-part .b-act{
+    width: 97.0%;
+    height:auto;
+    margin: auto 0.4em;
+    padding: 0.2em;
+    font-size: 0.8em;
+    background-color: antiquewhite;
+    border: solid #9d9d9d 0.1em;
+}
+#wrapper .middle .new-part .b-act hgroup{
+    width: 99%;
+    margin: auto;
+    padding: 0.2em;
+    //border: solid 0.1em;
+}
+#wrapper .middle .new-part .dte-maj{
+    float: right;
+    width: 15%;
+    //border: solid 0.1em red;
+}
+#wrapper .middle .new-part .b-act div{
+    float: left;
+    width: 32%;
+    height: auto;
+    margin: auto;
+    padding: 0;
+    //border: solid 0.1em;
+}
+#wrapper .middle .new-part .b-act .div-act{
+    width: 45%;
+}
+#wrapper .middle .new-part .b-act .div-note{
+    float: left;
+    width: 20%;
+}
+#wrapper .middle .new-part .b-act .div-note fieldset{
+    width: 97%;
+    height: auto;
+    margin: 0.2em;
+    padding: 0;
+    //border: solid 0.1em;
+}
+#wrapper .middle .new-part .b-act .div-note .f-fabr{
+    height: 6.4em;
+    margin-bottom: 0.9em;
+}
+#wrapper .middle .new-part .b-act .div-note .f-fabr ul{
+    height: 5.0em;
+    margin: 0.5em auto;
+    overflow: auto;
+    //border: solid 0.1em;
+}
+#wrapper .middle .new-part .b-act .div-note fieldset textarea{
+    width: 98%;
+    height: 17.0em;
+}
+#wrapper .middle .new-part .b-act ul{
+    height: 20.0em;
+    background: none;
+    //border: solid 0.1em;
+}
+#wrapper .middle .new-part .b-act ul li{
+    width: 98%;
+    //border: solid 0.1em;
+}
+#wrapper .middle .new-part .b-act ul li:nth-child(odd){
+    background: none;
+}
+#wrapper .middle .new-part .b-act ul li:hover{
+    background-color: indigo;
+    color: #FEFEFE;
+}
+#wrapper .middle .new-part .b-act .stk-ul{
+    width: 95%;
+    height: 22.5em;
+    margin: 0.1em;
+    padding: 0.3em;
+    background-color: #FEFEFE;
+    border: solid #EDEDED 0.1em;
+    border-radius: 0.6em;
+    box-shadow: 0.1em 0.1em 0.1em #666;
+}
+#wrapper .middle .new-part .b-act .flotte-ul{
+    height: 9.0em;
+}
+#wrapper .middle .new-part .b-act .flotte{
+    width: 90%;
+    height: 13.0em;
+    margin: auto -0.3em;
+    border: solid #CCCCCC 0.1em;
+    border-radius: 0.6em;
+}
+#wrapper .middle .new-part .b-act label{}
+#wrapper .middle .new-part .b-act .lab{
+    display: inline-block;
+    width: 100%;
+}
+#wrapper .middle .new-part .b-act div input{
+    float: left;
+    width: 2.0em;
+}
+#wrapper .middle .new-part .b-act input[type='submit'],
+#wrapper .middle .new-part .b-act input[type='button']{
+    text-align: center;
+    margin: 0.3em;
+    border: solid beige 0.1em;
+}
+#wrapper .middle .new-part .b-act select{
+    width: 100%;
+}
+#wrapper .middle .new-part .b-act fieldset{
+    float: left;
+    width: 30%;
+    height: auto;
+    margin: auto;
+    border: 0;
+}
+#wrapper .middle .new-part .b-act textarea{
+    resize: none;
+}
+#wrapper .middle .new-part .b-act .f-ul{
+    width: 100%;
+}
+#wrapper .middle .new-part .b-act .div-cert{
+    width: 34%;
+    //border: solid yellow 0.1em;
+}
+#wrapper .middle .new-part .b-act .div-cert hgroup{
+    float:left;
+    width: 100%;
+    height: 12.4em;
+    margin: 0.1em;
+    padding: 0.2em;
+    background-color: #FEFEFE;
+    border: solid #9d9d9d 0.1em;
+}
+#wrapper .middle .new-part .b-act .div-cert hgroup img{
+    float: left;
+    width: 15%;
+    margin: -0.6em auto;
+    padding: 0.2em;
+}
+#wrapper .middle .new-part .b-act .div-cert hgroup ul{
+    width: 94%;
+    height: 10.2em;
+    margin: auto;
+    padding: 0.3em;
+    border: solid #EDEDED 0.1em;
+}
+#wrapper .middle .new-part .b-act .div-cert hgroup .ul-cert{
+    height: 11.4em;
+    //border: solid 0.1em;
+}
+#wrapper .middle .new-part .b-act .div-cert hgroup .list-cert{
+    height: 8.4em;
+}
+#wrapper .middle .new-part .b-act .div-cert hgroup p{
+    width: 94%;
+    height: 1.4em;
+    margin: 1.0em auto;
+    padding: 0.2em;
+    border: solid #EDEDED 0.1em;
+    border-radius: 0.2em;
+}
+#wrapper .middle .new-part .b-act .div-cert hgroup .ul-mro{
+    height: 3.4em;
+}
+#wrapper .middle .new-part .b-act .div-cert select{
+    //width: 70%;
+    border-radius: 0.0em;
+    border:solid #EDEDED 0.1em;
+}
+#wrapper .middle .new-part .b-act .div-cert hgroup  div{
+    float: left;
+    width: 49%;
+    //border: solid 0.1em;
+}
+#wrapper .middle .new-part .b-infos-fin{
+    width: 96.8%;
+    margin: 0.4em 0.3em;
+    padding: 0.2em;
+    background-color:rgba(176,207,193,0.8);
+    border: solid #9d9d9d 0.1em;
+}
+#wrapper .middle .new-part .b-infos-fin hgroup{
+    width: 99%;
+    margin: auto;
+    padding: 0.2em;
+    //border: solid 0.1em;
+}
+#wrapper .middle .new-part .b-infos-fin fieldset{
+    float: left;
+    width: 98.6%;
+    margin: auto;
+    border: 0;
+}
+#wrapper .middle .new-part .b-infos-fin fieldset hgroup{
+    float: left;
+    width: 32.7%;
+    height: 12.0em;
+    margin: 0.1em;
+    padding: 0;
+    overflow: auto;
+    //border: solid 0.1em;
+}
+#wrapper .middle .new-part .b-infos-fin fieldset .b-rib{
+    width: 33.0%;
+    //border: solid 0.1em;
+    overflow: hidden;
+}
+#wrapper .middle .new-part .b-infos-fin fieldset hgroup div{
+   width: 28%;
+   height: 10.0em;
+   margin: auto;
+   padding: 0.1em;
+   //border: solid 0.1em;
+}
+#wrapper .middle .new-part .b-infos-fin fieldset hgroup .lien-web{
+    width: 70%;
+}
+#wrapper .middle .new-part .b-infos-fin fieldset hgroup img{
+    float: left;
+    width: 15%;
+    margin: -0.2em auto;
+    padding: 0.2em;
+}
+#wrapper .middle .new-part .b-infos-fin fieldset hgroup p{
+    margin: auto;
+    padding:0.2em;
+    height: auto;
+    //border: solid #EDEDED 0.1em;
+}
+#wrapper .middle .new-part .b-infos-fin fieldset hgroup .p-rib{
+    display: inline-block;
+    width: 96%;
+    margin: auto;
+    padding: 0.5em;
+    background-color: #FEFEFE;
+    text-align: center;
+}
+#wrapper .middle .new-part .l-browse{
+    width: 95%;
+    margin: 0.9em auto;
+    border: solid #EDEDED 0.1em;
+}
+#wrapper .middle .new-part .l-browse:hover{
+    cursor: pointer;
+}
+#wrapper .middle .new-part .b-infos-fin fieldset hgroup div ul{
+    width: 100%;
+    height: 7.2em;
+    border: solid #EDEDED 0.1em;
+}
+#wrapper .middle .new-part .b-infos-fin label{}
+#wrapper .middle .new-part .b-infos-fin .lab{
+    display: inline-block;
+    width: 46%;
+    margin: auto;
+    padding: 0;
+    //border: solid 0.1em;
+}
+#wrapper .middle .new-part .b-infos-fin table{
+    width: 100%;
+    margin: auto;
+    padding: 0;
+    background-color: #FEFEFE;
+    text-align: center;
+}
+#wrapper .middle .new-part .b-infos-fin table tr:nth-child(odd){
+    background-color: #EDEDED; 
+}
+#wrapper .middle .new-part .b-infos-fin fieldset textarea{
+    height: 5.6em;
+}
+#wrapper .middle .new-part .b-infos-fin input[type='button']{
+    position: absolute;
+    width: 2%;
+    box-shadow: 0.1em 0.1em 0.1em #333;
+    border: solid #EDEDED 0.1em;
+}
+
+/************ CSS TRAITANT LA FENETRE RESULTAT DE FILTRE **********
+******************************************************************/
+#wrapper .middle .search-list{
+    width: 97%;
+    margin: auto;
+    padding: 1.0em;
+    background-color: transparent;
+    //border: solid 0.1em;
+}
+#wrapper .middle .search-list fieldset{
+    border: 0;
+}
+#wrapper .middle .search-list table{
+    width: 100%;
+    margin: auto;
+    background-color:#FEFEFE;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.8em;
+    //border: solid 0.1em;
+}
+#wrapper .middle .search-list table a{
+    color: #333333;
+}
+#wrapper .middle .search-list table .act a{
+    color: #333333;
+}
+#wrapper .middle .search-list table .desact a{
+    color: crimson;
+}
+#wrapper .middle .search-list input{
+    float: left;
+    width: 1.5em;
+    margin: auto;
+}
+#wrapper .middle .search-list p em{
+    width: 60%;
+    //border: solid 0.1em;
+}
+#wrapper .middle .search-list p em select{
+    width: 20%;
+    border: 0;
+}
+#wrapper .middle .search-list input[type='submit']{
+    float: right;
+    width: 10%;
+    margin: auto 1.2em;
+}
+#wrapper .middle .search-list table tr:nth-child(odd){
+    background-color: #EDEDED;
+}
+#wrapper .middle .search-list table td,
+#wrapper .middle .search-list table th{
+    padding: 0.4em;
+    border: solid #CCCCCC 0.1em;
+}
+#wrapper .middle .search-list table th{
+    background-color: #9d9d9d;
+    font-weight: bold;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+#wrapper .middle .annonceurs-form{
+    float: left;
+    width: 97%;
+    margin: auto;
+    padding: 0.2em;
+    color: #666666;
+    background-color: #e5b7d4;
+    border: solid rgba(0,121,175,1.0) 0.1em;
+}
+#wrapper .middle .annonceurs-form hgroup{
+    width: 95.3%;
+    padding: 1.6em;
+}
+#wrapper .middle .annonceurs-form h1{
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+}
+#wrapper .middle .annonceurs-form fieldset{
+    float: left;
+    width: 40%;
+    border: solid 0.1em #CCCCCC;
+}
+#wrapper .middle .annonceurs-form .field-soc{
+    width: 30%;
+}
+#wrapper .middle .annonceurs-form .infos-soc{
+    width: 40%;
+    //border: solid 0.1em red;
+}
+#wrapper .middle .annonceurs-form .infos-soc input{
+    width: 67%;
+    margin:auto;
+    padding: 0.2em;
+    border-radius: 0.3em;
+}
+#wrapper .middle .annonceurs-form p{
+    width: 100%;
+    //border: solid 0.1em;
+}
+#wrapper .middle .annonceurs-form p em{
+    width: 60%;
+    //border: solid 0.1em;
+}
+#wrapper .middle .annonceurs-form p input[type='checkbox']{
+    float: left;
+    width: 1.9em;
+    height:auto;
+    margin: 0.3em auto;
+}
+#wrapper .middle .annonceurs-form .infos-soc input[type='submit']{
+    float: right;
+    width: 15%;
+}
+#wrapper .middle .annonceurs-form label{
+    display: inline-block;
+    //border: solid 0.1em;
+}
+#wrapper .middle .annonceurs-form div{
+    display: inline-block;
+    width: 100%;
+    height: 39.0em;
+    margin: auto;
+    padding: 0;
+    overflow: auto;
+    //border: solid 0.1em;
+}
+#wrapper .middle .annonceurs-form table{
+    float: left;
+    width: 99.9%;
+    margin: 0.2em auto;
+    padding: 0.1em;
+    background-color: #FEFEFE;
+    border-radius: 0.1em;
+}
+#wrapper .middle .annonceurs-form table tr:nth-child(odd){
+    background-color: #EDEDED;
+}
+#wrapper .middle .annonceurs-form table td{
+    width: 100%;
+    //border: solid 0.1em;
+}
+#wrapper .middle .annonceurs-form table td a{
+    width: 100%;
+}
+#wrapper .middle .finance-form{
+    float: left;
+    width: 97.3%;
+    margin: auto;
+    padding: 0.3em;
+    background-color: #1c94c4;
+    color: #333333;
+    //background-color: #e5b7d4;
+    border: solid rgba(0,121,175,1.0) 0.1em;
+}
+#wrapper .middle .finance-form h1{
+    width: 100%;
+    text-align: center;
+    //border: solid 0.1em;
+}
+#wrapper .middle .finance-form > p{
+    float: left;
+    width: 96%;
+    margin: auto;
+    padding: 0.3em;
+    //border: solid 0.1em;
+}
+#wrapper .middle .finance-form > p input{
+    width: 10%;
+}
+#wrapper .middle .finance-form hgroup{
+    float: left;
+    width: 32%;
+    margin: 0.2em;
+    padding: 0;
+    background: none;
+    //border: solid 0.1em;
+}
+#wrapper .middle .finance-form fieldset{
+    float: left;
+    width: 92%;
+    border: solid 0.1em;
+    margin: 0.1em;
+    border: 0;
+}
+#wrapper .middle .finance-form fieldset textarea{
+    height: 6.4em;
+}
+#wrapper .middle .finance-form fieldset div{
+    display: inline-block;
+    width: 100%;
+    height: 24.4em;
+    margin: auto;
+    //border: solid red 0.1em;
+}
+#wrapper .middle .finance-form div table{
+    width: 100%;
+    height: auto;
+    margin: 0.2em auto;
+    border-radius: 0.2em;
+    background-color: #FEFEFE;
+}
+#wrapper .middle .finance-form div table tr:nth-child(odd){
+    background-color: #EDEDED;
+}
+#wrapper .middle .finance-form .field-det{
+    border: solid 0.1em dodgerblue;
+}
+#wrapper .middle .finance-form .field-det ul{
+    float: right;
+    width: 52%;
+    height: 10.2em;
+    margin: auto;
+}
+#wrapper .middle .finance-form .field-det ul li{
+    width: 94%;
+    //border: solid 0.1em;
+}
+#wrapper .middle .finance-form .field-det ul li input{
+    float: left;
+    width: 1.4em;
+    margin: 0.2em auto;
+}
+#wrapper .middle .finance-form .field-det ul li em{
+    display: inline-block;
+    width: 70%;
+}
+#wrapper .middle .finance-form .field-det input[type='submit']{
+    width: 2.0em;
+}
+#wrapper .middle .finance-form .field-cont{
+    float: left;
+    width: 96%;
+    margin: 0.2em;
+    padding: 0.2em;
+    border: solid #EDEDED 0.1em;
+    background-color: silver;
+}
+#wrapper .middle .finance-form .finance-type{
+    margin: 0.9em auto;
+}
+#wrapper .middle .finance-form .finance-type p{
+    margin: 0.1em;
+}
+#wrapper .middle .finance-form .finance-type p input{
+    float: left;
+    width: 1.2em;
+    margin: 0.2em auto;
+}
+#wrapper .middle .finance-form .finance-type p em{
+    width: 60%;
+}
+#wrapper .middle .finance-form textarea{
+    width: 95.6%;
+    height: 19.4em;
+    margin: auto 0.2em;
+    padding: 0.4em;
+    resize: none;
+}
+#wrapper .middle .finance-form input[type='button']{
+    float: left;
+    width: 10%;
+    margin: auto 1.7em;
+}
+#wrapper .middle .fraude{
+    float: left;
+    width: 97.0%;
+    height: 42.0em;
+    margin: auto;
+    padding: 0.4em;
+    background-color: #e5b7d4;
+    border: solid rgba(0,121,175,1.0) 0.1em;
+}
+#wrapper .middle .fraude h2{
+    width: 100%;
+    text-align: center;
+}
+#wrapper .middle .fraude p{
+    display: inline-block;
+    width: 98%;
+    margin: 0.4em;
+    //border: solid 0.1em;
+}
+#wrapper .middle .fraude p input{
+    width: 20%;
+}
+#wrapper .middle .fraude div{
+    width: 100%;
+    height: 32.3em;
+    overflow: auto;
+    //border: solid 0.1em;
+}
+#wrapper .middle .fraude table{
+    width: 100%;
+    background-color: #FEFEFE;
+    text-align: left;
+    border-collapse: collapse;
+    border: solid #EDEDED 0.1em;
+}
+#wrapper .middle .fraude table thead{
+    font-size: 1.1em;
+    font-style: italic;
+    font-weight: bold;
+    background-color: #CCCCCC;
+}
+#wrapper .middle .fraude table td{
+    font-size: 0.9em;
+    margin: auto;
+    padding: 0.2em;
+    border: solid #CCCCCC 0.1em;
+}
+#wrapper .middle .fraude p input[type='button']{
+    width: 10%;
+}
+#wrapper .middle .fraude table tbody tr:nth-child(odd){
+    background-color: #EDEDED;
+}
+#wrapper .middle .piece-page{
+    display: inline-block;
+    width: 97.0%;
+    margin: auto;
+    background-color: #FEFEFE;
+    border: solid #1c94c4 0.1em;
+}
+#wrapper .middle .piece-page > img{
+    float: left;
+    width: 1.2em;
+    margin: 1.6em auto;
+    border-bottom: solid #EDEDED 0.1em;
+    //box-shadow: 0 0.1em 0.1em rgba(46,46,46,0.1);
+}
+#wrapper .middle .piece-page h1{
+    float: left;
+    width: 91%;
+    text-align: center;
+    //border: solid 0.1em;
+}
+#wrapper .middle .piece-page > hgroup{
+    width: 100%;
+    margin: auto;
+    padding: 0;
+    //border: dashed #EDEDED 0.1em;
+}
+#wrapper .middle .piece-page .acheteur{
+    background: none;
+}
+#wrapper .middle .piece-page .acheteur hgroup{
+    width: 36.0%;
+    background: none;
+}
+#wrapper .middle .piece-page .acheteur .hg-cond{
+    width: 20.0%;
+}
+#wrapper .middle .piece-page .acheteur .hg-cond fieldset{
+    border: 0;
+}
+#wrapper .middle .piece-page .acheteur .hg-cond ul{
+    height: 9.0em;
+    background: none;
+    border-top:solid #EDEDED 0.1em;
+    padding-top: 0.2em;
+    //overflow: no-display;
+}
+#wrapper .middle .piece-page .acheteur .hg-cond input{
+    float: left;
+    width: auto;
+}
+#wrapper .middle .piece-page .acheteur .hg-cond li{
+    float: left;
+    width: 80%;
+}
+#wrapper .middle .piece-page .acheteur .hg-cond em{
+    float: right;
+    width: 88%;
+    margin:-0.2em auto;
+    padding: 0;
+    //border: solid 0.1em;
+}
+#wrapper .middle .piece-page .acheteur select{
+    width: 61%;
+    //border: solid red 0.1em;
+}
+#wrapper .middle .piece-page > hgroup hgroup{
+    float: left;
+    width: 47.0%;
+    margin: 0.1em;
+    padding: 0.2em;
+    background: none;
+}
+#wrapper .middle .piece-page > hgroup hgroup p{
+    float: left;
+    width: 100%;
+    margin: 0.1em;
+    padding: 0.1em;
+    //border: solid 0.1em;
+}
+#wrapper .middle .piece-page > hgroup hgroup p label{
+    display: inline-block;
+    width: 30%;
+    text-align: right;
+    //border: solid 0.1em;
+}
+#wrapper .middle .piece-page > hgroup hgroup p input{
+    width: 60%;
+    border: solid #CCCCCC 0.1em;
+}
+#wrapper .middle .piece-page > hgroup .left{
+    //border: solid red 0.1em;
+    padding: 0.7em;
+}
+#wrapper .middle .piece-page > hgroup .left div{
+    float: left;
+    width: 49%;
+    border-right: solid #333 0.1em;
+}
+#wrapper .middle .piece-page > hgroup select{
+    float: right;
+    width: 63%;
+    color: #9d9d9d;
+}
+#wrapper .middle .piece-page > hgroup .left p{
+    width: 97.0%;
+    //border: solid 0.1em;
+}
+#wrapper .middle .piece-page > hgroup .left p label{
+    width: 30.0%;
+    //border: solid 0.1em;
+}
+#wrapper .middle .piece-page > hgroup .right{
+    width: 45.0%;
+    padding: 0.7em;
+}
+#wrapper .middle .piece-page > hgroup .right p{
+    float: left;
+    width: 31.0%;
+    height: auto;
+    //border: solid 0.1em;
+}
+#wrapper .middle .piece-page > hgroup .right p em{
+    float: right;
+    width: auto;
+    color: blue;
+    //border: solid 0.1em;
+}
+#wrapper .middle .piece-page > hgroup .right p input,
+#wrapper .middle .piece-page > hgroup .right p select{
+    float: left;
+}
+#wrapper .middle .piece-page > hgroup .right p input[type='text'],
+#wrapper .middle .piece-page > hgroup .right p select{
+    width: 97%;
+    border: solid #EDEDED 0.1em;
+}
+#wrapper .middle .piece-page > hgroup .right p input[type='date']{
+    width: 102%;
+}
+#wrapper .middle .piece-page > hgroup .right div{
+    float: left;
+    width: 31.3%;
+    margin: 0.1em;
+    border-left: solid #EDEDED 0.1em;
+}
+#wrapper .middle .piece-page > hgroup .right div img{
+    float: left;
+    width: 1.9em;
+}
+#wrapper .middle .piece-page .piece-temp{
+    width: 90%;
+    margin: 1.9em 3.0em;
+    border: solid #9d9d9d 0.1em;
+}
+#wrapper .middle .piece-page > p{
+    display: inline-block;
+    //border: solid 0.1em;
+    margin: auto 4.4em;
+}
+#wrapper .middle .piece-page > p label{
+    display: inline-block;
+    margin: 0.3em auto;
+}
+#wrapper .middle .piece-page input[type='submit']{
+    float: left;
+    width: 1.7em;
+    margin: 0.2em;
+    padding: 0.2em;
+    border: solid #9d9d9d 0.1em;
+    box-shadow: 0.1em 0.1em 0.1em #333;
+}
+#wrapper .middle .piece-page .piece-temp input[type='date']{
+    width: 80%;
+}
+#wrapper .middle .piece-page .piece-temp > p{
+    //display: inline-block;
+    width: 99%;
+    height: 1.4em;
+    margin: auto;
+    padding: 0;
+    border-bottom: solid #EDEDED 0.1em;
+}
+#wrapper .middle .piece-page .piece-temp > p .sup-piece{
+    float: right;
+    margin:auto;
+    padding: 0.1em;
+    font-size: 1.2em;
+    color: #9d9d9d;
+    //border-left: solid 0.1em;
+}
+#wrapper .middle .piece-page .piece-temp .sup-piece:hover{
+    cursor: pointer;
+}
+#wrapper .middle .piece-page .piece-temp > p img{
+    float: right;
+    width: 1.0em;
+    border-right: solid #CCCCCC 0.1em;
+    margin:0.3em 0.1em;
+}
+#wrapper .middle .piece-page .piece-temp > p img:hover{
+    cursor: pointer;
+}
+#wrapper .middle .piece-page .acheteur fieldset{
+    border: solid #EDEDED 0.1em;
+    height: auto;
+    padding: 0.3em;
+}
+#wrapper .middle .piece-page .acheteur fieldset textarea{
+    width: 99.5%;
+    height: 10.6em;
+    resize: none;
+    border: 0;
+}
+#wrapper .middle .piece-page .acheteur fieldset .note-piece{
+    height: 4.6em;
+    border: solid #EDEDED 0.1em;
+}
+#wrapper .middle .piece-page .hg-table{
+    width: 99.9%;
+    height: 33.0em;
+    margin: 0.5em auto;
+    background: none;
+    //border: solid 0.1em;
+    overflow: auto;
+}
+#wrapper .middle .piece-page table{
+    //position: relative;
+    width: 96%;
+    margin: auto;
+    border-collapse: collapse;
+    color: #666666;
+    font-size: 1.0em;
+    //border: solid #CCCCCC 0.1em;
+}
+#wrapper .middle .piece-page table img{
+    width: 1.5em;
+}
+#wrapper .middle .piece-page table a{
+    padding: 0.2em;
+    //border: solid #CCCCCC 0.1em;
+    //box-shadow: 0.1em 0.1em 0.1em rgba(46,46,46,0.3);
+}
+#wrapper .middle .piece-page table thead{
+    background-color: #CCCCCC;
+}
+#wrapper .middle .piece-page table tbody{
+    font-size: 0.8em;
+}
+#wrapper .middle .piece-page table tbody > tr:nth-child(odd){
+    background-color: #EDEDED;
+}
+#wrapper .middle .piece-page table th,
+#wrapper .middle .piece-page table td{
+    position: relative;
+    text-align: left;
+    padding: 0.2em;
+    border: solid #CCCCCC 0.1em;
+}
+#wrapper .middle .piece-page table td{
+    //width: 3.2em;
+    //height:3.2em;
+    margin: auto;
+    //border: solid #CCCCCC 0.1em;
+    overflow: hidden;
+}
+#wrapper .middle .piece-page table td em{
+    //position: absolute;
+    width: 100%;
+    //height: 2.6em;
+    margin:auto;
+    top:0.5em;
+    //border: solid 0.1em;
+}
+#wrapper .middle .piece-page table td label{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0.2em;
+    padding: 0.2em;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    border: solid #CCCCCC 0.1em;
+    border-radius: 50%;
+    font-size: 0.8em;
+    display: none;
+}
+#wrapper .middle .piece-page table td label:hover{
+    cursor: pointer;
+}
+#wrapper .middle .piece-page table td:hover label{
+    display: block;
+}
+#wrapper .middle .piece-page table tfoot td{
+    border: 0;
+}
+#wrapper .middle .piece-page input[type='button']{
+    float: left;
+    width: 2.0em;
+    font-size: 0.8em;
+    box-shadow: 0.1em 0.1em 0.1em rgba(46,46,46,0.7);
+}
+#wrapper .middle .piece-page table input[type='text'],
+#wrapper .middle .piece-page table select{
+    float: left;
+    width:100%;
+    margin: auto;
+    background-color: #fdf5ce;
+    //border: solid 0.1em;
+}
+#wrapper .middle .piece-page table td .set-updt-pce{
+    position: relative;
+    background: none;
+    width:auto;
+    //border: solid 0.1em;
+}
+#wrapper .middle .piece-page table td input[type='submit']{
+    width: 2.0em;
+    height: 1.0em;
+    padding: 0;
+}
+#wrapper .middle .piece-page table .z-new{
+    padding: 0;
+}
+#wrapper .middle .piece-page table td table{
+    width: 100%;
+    border: solid #CCCCCC 0.1em;
+}
+#wrapper .middle .piece-page table td table th,
+#wrapper .middle .piece-page table td table td{
+    width: 10%;
+}
+#wrapper .middle .piece-page table td table tbody tr:nth-child(odd){
+    background-color: #FEFEFE;
+}
+#wrapper .middle .piece-page table td table tbody input[type='text'],
+#wrapper .middle .piece-page table td table tbody select{
+    position: relative;
+    width: 95%;
+    background: none;
+    border: none;
+}
+#wrapper .middle .piece-page table td table thead{
+    background-color: #e5b7d4;
+    //border: solid 0.1em;
+}
+#wrapper .middle .paperboard-form{
+    float: left;
+    width: 97.0%;
+    height: 52.0em;
+    margin: auto;
+    border: solid #1c94c4 0.1em;
+    background-color: #FFF;
+}
+#wrapper .middle .paperboard-form h2{
+    width: 100%;
+    text-align: center;
+}
+#wrapper .middle .paperboard-form p{
+    //display: inline-block;
+    width: 80%;
+    margin:auto;
+    padding-bottom: 0.4em;
+    //border: solid 0.1em;
+}
+#wrapper .middle .paperboard-form p input{
+    width: 20%;
+    margin-bottom: 0.9em;
+}
+#wrapper .middle .paperboard-form div{
+    width: 80%;
+    margin: 2.6em auto;
+    height: 40.0em;
+    //border: solid 0.1em;
+    overflow: auto;
+}
+#wrapper .middle .paperboard-form table{
+    float: left;
+    width: 98%;
+    margin: auto;
+    background-color: #FEFEFE;
+    text-align: left;
+    border-collapse: collapse;
+    border: solid #EDEDED 0.1em;
+}
+#wrapper .middle .paperboard-form table thead{
+    font-size: 1.1em;
+    font-style: italic;
+    font-weight: bold;
+    background-color: #CCCCCC;
+}
+#wrapper .middle .paperboard-form table th,
+#wrapper .middle .paperboard-form table td{
+    font-size: 0.9em;
+    margin: auto;
+    padding: 0.4em;
+    border: solid #9d9d9d 0.1em;
+}
+#wrapper .middle .paperboard-form table td input{
+    float: left;
+    width: 2.0em;
+}
+#wrapper .middle .paperboard-form p input[type='button']{
+    width: 10%;
+}
+#wrapper .middle .paperboard-form table tbody tr:nth-child(odd){
+    background-color: #EDEDED;
+}
+#wrapper .middle .fiche-par-societe{
+    display: inline-block;
+    width: 93.1%;
+    height: 48.0em;
+    margin: auto;
+    padding: 1.4em;
+    padding-top: 2.3em;
+    border: solid #1c94c4 0.1em;
+    background-color: #FFF;
+}
+#wrapper .middle .fiche-par-societe hgroup{
+    background: none;
+}
+#wrapper .middle .fiche-par-societe h1{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+#wrapper .middle .fiche-par-societe p{
+    display: inline-block;
+    width: 100%;
+    //border: solid 0.1em;
+}
+#wrapper .middle .fiche-par-societe input[type='search']{
+    width: 30%;
+}
+#wrapper .middle .fiche-par-societe label{
+    display: inline-block;
+    width: 28.0%;
+    //border: solid 0.1em;
+    text-align: right;
+}
+#wrapper .middle .fiche-par-societe fieldset select,
+#wrapper .middle .fiche-par-societe fieldset input{
+    float: right;
+    width: 65%;
+    border: solid #CCCCCC 0.1em;
+}
+#wrapper .middle .fiche-par-societe hgroup{
+    margin: 2.4em auto;
+}
+#wrapper .middle .fiche-par-societe fieldset{
+    float: left;
+    width: 42.0%;
+    margin: 0.2em;
+    border: 0;
+}
+#wrapper .middle .fiche-par-societe table{
+    width: 80%;
+    margin: auto;
+    background-color: #FEFEFE;
+    text-align: left;
+    border-collapse: collapse;
+    border: solid #EDEDED 0.1em;
+}
+#wrapper .middle .fiche-par-societe table thead{
+    font-size: 1.1em;
+    font-style: italic;
+    font-weight: bold;
+    background-color: #CCCCCC;
+}
+#wrapper .middle .fiche-par-societe table th,
+#wrapper .middle .fiche-par-societe table td{
+    font-size: 0.9em;
+    margin: auto;
+    padding: 0.4em;
+    border: solid #9d9d9d 0.1em;
+}
+#wrapper .middle .fiche-par-societe table td input{
+    float: left;
+    width: 47.0%;
+    margin: 0.2em;
+}
+#wrapper .middle label{}
+#wrapper .middle .lab{
+    display: inline-block;
+    width: 35%;
+    //border: solid 0.1em;
+}
+#wrapper .middle p{
+    margin: 0.3em;
+    //border: solid 0.1em;
+}
+#wrapper .middle input{
+    float: right;
+    width: 50%;
+    margin: auto;
+    padding: 0.2em;
+}
+
+#wrapper .middle input[type='search']{
+    float: left;
+    width: 100%;
+    height: 2.5em;
+    margin:0.2em auto;
+    padding: 0.3em;
+    border: solid #EDEDED 0.1em;
+    border-radius: 0.9em;
+}
+#wrapper .middle .paper-search{
+    width: 80%;
+    height: 46.0em;
+    margin: auto;
+    padding: 0.8em;
+    background-color: #FEFEFE;
+    overflow: auto;
+    //border: solid 0.1em;
+}
+#wrapper .middle .paper-search h2{
+    margin: auto;
+    padding: 0.2em;
+    background-color: #eeeeee;
+    box-shadow: 0 0 0.1em rgba(46,46,46,0.4);
+    color: #1c94c4;
+    //border: solid 0.1em;
+}
+#wrapper .middle .paper-search p{
+    float: left;
+    width: 99%;
+    //border: solid 0.1em;
+}
+#wrapper .middle .paper-search table{
+    width: 60%;
+    border-collapse: collapse;
+}
+#wrapper .middle .paper-search table thead{
+    background-color: #e5b7d4;
+}
+#wrapper .middle .paper-search table th,
+#wrapper .middle .paper-search table td{
+    padding: 0.3em;
+    text-align: left;
+}
+#wrapper .middle .paper-search table tbody tr:nth-child(odd){
+    background-color: #EDEDED;
+}
+#wrapper .middle .paper-search input{
+    width: 25%;
+}
+#wrapper .middle .paper-pn{
+    width: 80%;
+    height: 46.0em;
+    margin: auto;
+    padding: 0.8em;
+    background-color: #FEFEFE;
+    //overflow: auto;
+    //border: solid 0.1em;
+}
+#wrapper .middle .paper-pn h2{
+    margin: auto;
+    padding: 0.2em;
+    background-color: #eeeeee;
+    box-shadow: 0 0 0.1em rgba(46,46,46,0.4);
+    color: #1c94c4;
+    //border: solid 0.1em;
+}
+#wrapper .middle .paper-pn a{
+    color: #1c94c4;
+}
+#wrapper .middle .paper-pn hgroup{
+    width: 99.2%;
+    height: 16.6em;
+    margin: 0.2em;
+    background: none;
+    //border: solid 0.1em;
+}
+#wrapper .middle .paper-pn .hg-haut{
+    height: 24.0em;
+}
+#wrapper .middle .paper-pn hgroup fieldset{
+    float: left;
+    width: 44%;
+    height: 22.0em;
+    margin: 0.2em;
+    border: 0;
+}
+#wrapper .middle .paper-pn hgroup fieldset fieldset{
+    width: 96%;
+    height: 14.2em;
+    margin: 1.0em auto;
+    border: solid #CCCCCC 0.1em;
+}
+#wrapper .middle .paper-pn hgroup fieldset .f-dree-vie{
+    height: 12.6em;
+}
+#wrapper .middle .paper-pn hgroup fieldset fieldset div{
+    height: 13.2em;
+    //border: solid 0.1em;
+    overflow: auto;
+}
+#wrapper .middle .paper-pn hgroup .f-left{
+    border-right: solid #EDEDED 0.1em;
+}
+#wrapper .middle .paper-pn hgroup fieldset div{
+    float: left;
+    width: 100%;
+    margin: 0.1em;
+    //border: solid 0.1em;
+}
+#wrapper .middle .paper-pn hgroup fieldset .div-title{
+    width: 48%;
+}
+#wrapper .middle .paper-pn hgroup fieldset .div-title h1{
+    float: left;
+    margin: auto;
+}
+#wrapper .middle .paper-pn hgroup fieldset .div-title p{
+    width: 96%;
+    //border: solid 0.1em;
+}
+#wrapper .middle .paper-pn hgroup fieldset .div-title p input{
+    float: left;
+    width: auto;
+    margin: 0.2em auto;
+}
+#wrapper .middle .paper-pn hgroup fieldset .div-title p em{
+    width: 80%;
+    margin: auto;
+    //border: solid 0.1em;
+}
+#wrapper .middle .paper-pn hgroup fieldset table{
+    width: 100%;
+    border-collapse: collapse;
+}
+#wrapper .middle .paper-pn hgroup fieldset table tr:nth-child(odd){
+    background-color: #EDEDED;
+}
+#wrapper .middle .paper-pn hgroup fieldset table td{
+    padding: 0.2em;
+}
+#wrapper .middle .paper-pn hgroup fieldset p{
+    width: 100%;
+    margin: 0.2em;
+    padding: 0.2em;
+    //border: solid 0.1em;
+}
+#wrapper .middle .paper-pn hgroup fieldset p input{
+    border: solid #666666 0.1em;
+}
+#wrapper .middle .paper-pn hgroup fieldset textarea{
+    width: 100%;
+    height: 13.6em;
+    resize: none;
+}
+#wrapper .middle .paper-pn .hg-bas{
+    width: 92.0%;
+    border: solid #CCCCCC 0.1em;
+}
+#wrapper .middle .paper-pn .hg-bas fieldset{
+    width: 97%;
+    height: auto;
+    //border: solid 0.1em;
+}
+#wrapper .middle .paper-pn .hg-bas fieldset label{
+    float: left;
+}
+#wrapper .middle .paper-pn .hg-bas fieldset p{
+    float: left;
+    width:auto;
+    margin: -0.1em 0.1em;
+    //border: solid 0.1em;
+}
+#wrapper .middle .paper-pn .hg-bas fieldset p em{
+    //float: right;
+    width: auto;
+    margin: -0.4em auto;
+    //border: solid 0.1em;
+}
+#wrapper .middle .paper-pn .hg-bas fieldset p input{
+    float: left;
+    width: auto;
+    margin: 0.1em auto;
+}
+#wrapper .middle .paper-pn .hg-bas div{
+    float: left;
+    width: 30%;
+    margin: 0.2em;
+    //border: solid 0.1em;
+}
+#wrapper .middle .paper-pn .hg-bas div p{
+    float: left;
+    width: 100%;
+    margin: 0.1em;
+    //border: solid 0.1em;
+}
+#wrapper .middle .paper-pn .hg-bas div input{
+    border: solid #666666 0.1em;
+}
+
+/*--- Importation des fichiers --*/
+#wrapper .middle .import-form{
+    width: 99%;
+    height: 52.0em;
+    border: solid 0.1em;
+}
+#wrapper .middle .import-form div{
+    position: relative;
+    width: 99%;
+    height: 47.7em;
+    margin: auto;
+    padding: 0.1em;
+    //border: solid #e5b7d4 0.1em;
+    overflow: auto;
+}
+#wrapper .middle .import-form div table{
+    width: 98%;
+    margin: auto;
+    border-collapse: collapse;
+}
+#wrapper .middle .import-form div thead{
+    margin: auto;
+    border: solid #CCCCCC 0.1em;
+    background-color: #CCCCCC;
+}
+#wrapper .middle .import-form div th,
+#wrapper .middle .import-form div td{
+    padding: 0.2em;
+}
+#wrapper .middle .import-form div td{
+    border: solid #CCCCCC 0.1em;
+}
+#wrapper .middle .import-form div thead select{
+    width: 100%;
+    color: #9d9d9d;
+}
+#wrapper .middle .import-form div tbody{
+    background-color: #FEFEFE;
+}
+#wrapper .middle .import-form h2{
+    width: 99%;
+    margin: auto;
+    //border: solid 0.1em;
+    color: #1c94c4;
+    text-decoration: underline;
+}
+
+//--- Une font chrgé sur la racine ----
+//------ Capsuula -----------
+@font-face {
+    font-family: "Capsuula";
+    src: url('fonts/Capsuula.ttf');
+}
+@-webkit-font-face {
+    font-family: "Capsuula";
+    src: url('fonts/Capsuula.ttf');
+}
+@-moz-font-face {
+    font-family: "Capsuula";
+    src: url('fonts/Capsuula.ttf');
+}
+@-ms-font-face {
+    font-family: "Capsuula";
+    src: url('fonts/Capsuula.ttf');
+}
+@-o-font-face {
+    font-family: "Capsuula";
+    src: url('fonts/Capsuula.ttf');
+}
+@font-face {
+    font-family: "Capsuula";
+    font-style: italic;
+    src: url('fonts/Capsuula.ttf');
+}
+@font-face {
+    font-family: "Capsuula";
+    font-weight: bold;
+    src: url('fonts/Capsuula.ttf');
+}
+//---- Eurostile ---------
+@font-face {
+    font-family: "Eurostile";
+    src: url('fonts/eurostile.ttf');
+}
+@-webkit-font-face {
+    font-family: "Eurostile";
+    src: url('fonts/eurostile.ttf');
+}
+@-moz-font-face {
+    font-family: "Eurostile";
+    src: url('fonts/eurostile.ttf');
+}
+@-ms-font-face {
+    font-family: "Eurostile";
+    src: url('fonts/eurostile.ttf');
+}
+@-o-font-face {
+    font-family: "Eurostile";
+    src: url('fonts/eurostile.ttf');
+}
+@font-face {
+    font-family: "Eurostile";
+    font-style: italic;
+    src: url('fonts/eurostile.ttf');
+}
+@font-face {
+    font-family: "Eurostile";
+    font-weight: bold;
+    src: url('fonts/eurostile.ttf');
+}
+//---- Calibri ---------
+@font-face {
+    font-family: "Calibri";
+    src: url('fonts/Calibri.ttf');
+}
+@-webkit-font-face {
+    font-family: "Calibri";
+    src: url('fonts/Calibri.ttf');
+}
+@-moz-font-face {
+    font-family: "Calibri";
+    src: url('fonts/Calibri.ttf');
+}
+@-ms-font-face {
+    font-family: "Calibri";
+    src: url('fonts/Calibri.ttf');
+}
+@-o-font-face {
+    font-family: "Calibri";
+    src: url('fonts/Calibri.ttf');
+}
+@font-face {
+    font-family: "Calibri";
+    font-style: italic;
+    src: url('fonts/Calibri.ttf');
+}
+@font-face {
+    font-family: "Calibri";
+    font-weight: bold;
+    src: url('fonts/Calibri.ttf');
+}
+/* CSS POUR LE CERTIFICAT ########################*/
+/*################################################################*/
+#new-certificat{
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(46,46,46,0.1);
+}
+
+#new-certificat form{
+    position: fixed;
+    width: 40em;
+    height: 30em;
+    top: 50%;
+    left: 50%;
+    margin-top:-15em;
+    margin-left:-20em;
+    padding:1em;
+    background-color: #f3f3f3;
+    border-top-left-radius:1.1em;
+    border-top-right-radius:1.1em;
+    border-top: solid rgba(69, 161, 214,0.8) 0.1em;
+    border-left: solid rgba(69, 161, 214,0.8) 0.2em;
+    box-shadow: rgb(69, 161, 214) 0.25em 0.25em ;   
+}
+
+#new-certificat form hr{
+    border:  dotted 0.1em blue;
+    height:28em;
+    float: left;
+    margin-left:2em;
+}
+/*
+#new-certificat form .certificat{
+    float: left;
+    //border: 0.1em solid red;
+    width:45%;
+    padding-left: 0.5em;
+    text-align: right;
+}
+*/
+#new-certificat form label{
+   color: rgb(69, 161, 214);
+   display: inline-block;
+   width: 32%;
+}
+#new-certificat form input[type='text']{
+    width: 65%;
+    border: 0;
+}
+#new-certificat form input[type='submit']{
+    width: 30%;
+    float: right;
+    color: rgb(69, 161, 214);
+    cursor: pointer;
+ }
+#new-certificat hgroup{
+     float: left;
+     width: 48%;
+     //border: solid 0.1em;
+ }
+ #new-certificat hgroup a{
+     float: right;
+     //width: 1.6em;
+     //height: 1.6em;
+     margin: -2.4em -2.2em;
+     padding: 0.3em;
+     padding-left: 0.4em;
+     padding-right: 0.4em;
+     text-align: center;
+     background-color: #EDEDED;
+     border-radius: 50%;
+     border: solid 0.1em #1c94c4;
+ }
+#new-certificat .list-ap{
+   // border:0.1em solid blue;  
+    float: right;
+    width: 45%;
+ }
+#new-certificat fieldset{
+    width: 95%;
+    height: auto;
+    border: 0;
+}
+#new-certificat fieldset ul{
+    height: 18.7em;
+    overflow: auto;
+    //border: solid 0.1em;
+}
+#new-certificat fieldset ul li:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+#new-certificat .list-ap fieldset legend{
+    color: rgb(69, 161, 214);
+}
+#new-certificat .list-ap  fieldset .div-list-ap{
+   height: 28.0em;
+   overflow:auto;
+}
+#new-certificat .list-ap em{
+    display: block;
+  }
+#new-certifica .list-ap em:nth-child(odd){
+   background-color:#EDEDED;
+   border-top-right-radius:0.4em;
+   border-bottom-right-radius: 0.4em;
+ }
+/*################ CSS POUR CHIFRE D4AFFAIRE ############################*/
+#add-chiffre{
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(46,46,46,0.1);
+}
+#add-chiffre .chiff-aff{
+     padding: 0.3em;
+     overflow-y: auto;
+     height: 25em;
+     background-color: #FEFEFE;
+ }
+ #add-chiffre .chiff-aff p{
+     width: 100%;
+     margin: auto;
+     padding: 0;
+     //border: solid 0.1em;
+ }
+ #add-chiffre .chiff-aff input{
+     width: 47%; 
+     height: 1.8em;
+     border: 0.1em solid #CCCCCC;
+ }
+ #add-chiffre .chiff-aff input[type='checkbox']{
+     float:left;
+     width: auto;
+ }
+ #add-chiffre .chiff-aff input[type='submit']{
+     margin-left:0.1em;
+     width: 6em;
+     margin-top:2em;
+     margin-left:calc(50% - 3.1em);
+     font-family:'Helvetica Neue',sans-serif;
+     background-color: #1c94c4;
+     color: white;
+     border:0;
+ }
+ #add-chiffre .chiff-aff  table {
+          width: 100%;
+          padding: 0;
+          border-collapse: collapse; 
+          //border: solid 0.1em;
+ }
+ #add-chiffre .chiff-aff table td{
+     padding-bottom: 0.2em;
+     border-bottom: solid #CCCCCC 0.1em;
+  }
+ #add-chiffre .chiff-aff input[type='button']{
+     float:right;
+     width: 100%;
+     height: 100%;
+ }
+#add-chiffre .chiff-aff label{
+    display: inline-block;
+    width: 50%;
+    color: #1c94c4;
+    font-family: sans-serif;
+    font-size:0.9em;
+    font-weight: bold; 
+    text-align: right;
+}
+/*------------------ CSS TRAIATNT LA FENETRE AJOUT DE SOURCE WEB ------*/
+#page-src{
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(46,46,46,0.1); 
+}
+#page-src hgroup{
+     width: 50%;
+     height:auto;
+     margin: auto;
+     padding: 4.5em;
+     background-color: #FEFEFE;
+ }
+ #page-src hgroup input,
+ #page-src hgroup select{
+     width: 60%;
+     height: 1.9em;
+     border:solid 0.1em #1c94c4;
+ }
+ #page-src hgroup input[type='submit']{
+     width: 10%;
+ } 
+ #page-src hgroup em{
+     float: right;
+     margin:-3.4em;
+ }
+ #page-src hgroup p > label{
+    display: inline-block;
+    width: 20%;
+    //border: solid 0.1em;
+ }
+ #page-src hgroup p{
+     margin: 0.1em auto;
+ }
+ #page-src hgroup fieldset{
+     margin: 1.5em auto;
+     border: solid #CCC 0.1em;
+ }
+ #page-src hgroup fieldset p{
+     margin: auto;
+     padding: 0.3em;
+     border:dashed #EDEDED 0.1em;
+     border-radius: 0.3em;
+ }
+ #page-src hgroup fieldset p label{
+     float: right;
+     width: auto;
+     cursor: pointer;
+     font-size: 0.7em;
+     color: #CCCCCC;
+ }
+ #page-src hgroup ul{
+     width: 94%;
+     height: 16.0em;
+     //border: solid 0.1em;
+     overflow: auto;
+ }
+ #page-src hgroup ul li{
+     width: 96%;
+ }
+ #page-src hgroup textarea{
+     width: 99%;
+     height: 4.6em;
+     margin: auto;
+     padding: 0.3em;
+     resize: none;
+ }
+ #page-src hgroup .vte-note{
+     height: 10.4em;
+     border: solid #EDEDED 0.1em;
+ }
+ #page-src .vte-prop{
+     height: 43.6em;
+     overflow: auto;
+ }
+ #page-src hgroup table{
+     width: 100%;
+     border-collapse: collapse;
+     text-align: left;
+     border: solid #EDEDED 0.1em;
+     color: #666666;
+ }
+ #page-src hgroup table tbody{
+     font-size: 0.8em;
+ }
+  #page-src hgroup table th,
+  #page-src hgroup table td{
+      padding: 0.2em;
+      border: solid #CCCCCC 0.1em;
+  }
+ #page-src hgroup table tbody tr:nth-child(odd){
+     background-color: #EDEDED;
+ }
+ #page-src hgroup table thead{
+     background-color: #e5b7d4;
+ }
+ #page-src .hg-plus{
+     position: relative;
+     border: solid 0.1em;
+     height: 12.0em;
+ }
+ #page-src .hg-plus .f-plus{
+     float: left;
+     width: 40%;
+     margin: 0.2em;
+    // border: solid red 0.1em;
+ }
+ #page-src .hg-plus label{
+     float: left;
+     width: 36%;
+     font-size: 1.0em;
+     color: #333333;
+     text-align: right;
+     padding-right: 0.4em;
+ }
+ #page-src .hg-plus input{
+     width: 50%;
+     height: 2.0em;
+ }
+ /*---------------------CSS POUR LA FENETRE RESUME DES MAILLING ------------*/
+ #mailing{
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 15%;
+    background-color: rgba(46,46,46,0.1); 
+ }
+ #mailing hgroup{
+    width: 100%;
+    height: 6.4em;
+    resize: none;
+    padding: 0.4em;
+    border-radius: 0.2em;
+    border: dashed 0.1em #EDEDED;
+    background-color: #FEFEFE;
+ }
+ #mailing hgroup p{
+     float: left;
+     width: auto;
+     margin: 0.2em;
+     padding: 0.3em;
+     border-radius: 0.6em;
+     background-color: #EDEDED;
+     color: #333333;
+ }
+ #mailing a{
+     float: left;
+     width: 49%;
+     margin: -1.2em 0.4em;
+     text-align: left;
+ }
+ #mailing em{
+    float:right;
+    width: 49%;
+    margin: -1.2em auto;
+    text-align: right;
+    //border: solid 0.1em;
+ }
+ #mailing em:hover{
+     cursor: pointer;
+ }
+ /*-------------------- CSS APPLIQUEE POUR LA FENETRE AJOUT PARTENAIRE PLAIGNAT ---*/
+ #plainte-form{
+     position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 15%;
+    background-color: rgba(46,46,46,0.1); 
+ }
+ #plainte-form hgroup{
+     display: inline-block;
+     width: 100%;
+     margin: auto;
+     padding: 0.5em;
+     background-color: #FEFEFE;
+ }
+ #plainte-form hgroup fieldset{
+     float: left;
+     width: 46%;
+     margin: 0.2em;
+     border:solid #EDEDED 0.1em;
+ }
+ #plainte-form hgroup fieldset div{
+     width: 100%;
+     height: 22.2em;
+     margin: auto;
+     //border: solid 0.1em;
+     overflow: auto;
+ }
+ #plainte-form hgroup fieldset p{
+     //border: solid 0.1em;
+ }
+ #plainte-form hgroup fieldset p input[type='text']{
+     float: right;
+     width: 60%;
+     height: 2.0em;
+     margin: auto;
+     border-radius: 0.3em;
+     border: dashed 0.1em #EDEDED;
+ }
+ #plainte-form hgroup fieldset input[type='submit']{
+     float: right;
+     width: 20%;
+     height: 2.2em;
+     border: 0;
+ }
+/*--------------------- Mise en page d'une fenetre pop pour-----------------*/
+/*------------------------------ le chargement -----------------------------*/
+#img-wrapper{
+	position:fixed;
+	z-index:100;
+	top:0;
+	left:0;
+	right:0;
+        bottom: 0;
+	overflow:hidden;
+        color: #EDEDED;
+	background:url(img/back-img.png);
+	}
+#img-wrapper .wrapper{
+	width:40%;
+	height:25.3em;
+	margin:10.6em auto;
+	border:solid #CCC 1.1em;
+	border-radius:0.4em;
+	background:#FFF;
+	}
+#img-wrapper .wrapper .close{
+	float:right;
+	font:0.9em Arial, Helvetica, sans-serif;
+	color:#999;
+	margin:-1.2em -0.9em;
+	}
+#img-wrapper .wrapper .close a{
+	text-decoration:none;
+	color:#999;
+	}
+#img-wrapper .wrapper img{
+	/*float:left;*/
+	width:30%;
+	height:14.4em;
+	margin:3.7em 12.3em;
+	padding:0.2em;
+	border:ridge #CCC 0.1em;
+	}
+#drop_zone{
+	width:38%;
+	height:17%;
+	margin:0.3em auto;
+	padding:10em;
+	border:dashed #CCCCCC 0.2em;
+	}
+#drop_zone p{
+	margin:-0.4em 0.4em;
+	font:1.6em Arial, Helvetica, sans-serif;
+	text-align:center;
+	}
+#result{
+	float:left;
+	width:20%;
+	height:auto;
+	margin:-17em 34em;
+	padding:0;
+	/*border:ridge #C03 0.1em;*/
+	}
+#result .s, #result .f {
+	float:left;
+	width:100%;
+	margin:auto;
+	padding:0.4em;
+	color:#666;
+	border:ridge rgba(204,204,204,1) 0.1em;
+}
+#result .s p, #result .f p{
+	font:0.9em Arial, Helvetica, sans-serif;
+	margin:0.3em auto;
+	padding:0;
+	}
+#result .f {
+    background-color: #fcc577;
+}
+#result .s p input{
+	float:right;
+	padding:0.2em;
+	border:0;
+}
+/*--- CSS POUR AJOUT APPAREILS ------*/
+#appareil{
+    position:fixed;
+    z-index:100;
+    top:0;
+    left:0;
+    right:0;
+    bottom: 0; 
+    padding: 10%;
+    background-color: rgba(46,46,46,0.1);
+    //border: solid red 0.1em;
+}
+#appareil h2{
+    width: 100%;
+    height: 2.2em;
+    margin: auto;
+    text-align: center;
+    color:  darkcyan;
+}
+#appareil hgroup{
+    display: inline-block;
+    width: 100%;
+    margin: auto;
+    background-color: #e5b7d4;
+    border: solid wheat;
+    padding:0.3em;
+}
+#appareil hgroup fieldset{
+    float: left;
+    width: 46%;
+    margin: 0.4em;
+}
+#appareil hgroup fieldset p{
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    margin: 0.1em;
+    //border: solid 0.1em;
+}
+#appareil hgroup fieldset p label{
+    display: inline-block;
+    width: 26%;
+    text-align: right;
+    //border: solid 0.1em;
+}
+#appareil .hg-app input{
+    width: 15%;
+    height: 2.6em;
+    margin: auto;
+    padding: 0.3em;
+    border: dashed #EDEDED 0.1em;
+}
+#appareil .hg-app input[type='text']{
+    width: 70%;
+    height: 1.6em;
+}
+.close-win-app{
+    float: right;
+    width:1.0em;
+    margin: -1.8em;
+    padding: 0.3em;
+    text-align: center;
+    border:dashed #CCCCCC 0.1em;
+    border-radius: 50%;
+    box-shadow: 0.1em 0.1em 0.1em rgba(0,0,0,0.1);
+}
+#appareil hgroup fieldset ul{
+    width: 95%;
+    height: 23.6em;
+    margin: auto;
+    padding: 0;
+    list-style-type: none;
+    background-color: #FEFEFE;
+    overflow: auto;
+}
+#appareil hgroup fieldset ul li{
+    width: 96%;
+    padding: 0.3em;
+}
+#appareil hgroup fieldset ul li:hover{
+    background-color:indigo;
+    color: #FEFEFE;
+    cursor: pointer;
+}
+#appareil hgroup fieldset ul li:nth-child(odd){
+    background-color: #EDEDED;
+}
+#appareil hgroup fieldset ul li label{
+    float: right;
+    //border: solid 0.1em;
+}
+#appareil hgroup select{
+    float: left;
+    width: 16.0em;
+    height: 2.2em;
+    background-color: #fdf5ce;
+    margin:2em;  
+}
+/*-------CSS POUR LE FORMULAIRE MARQUE ----*/
+#marque-form{
+    position:fixed;
+    z-index:100;
+    top:0;
+    left:0;
+    right:0;
+    bottom: 0;
+    padding: 10%;
+    background-color: rgba(46,46,46,0.1);
+    //border: solid red 0.2em;
+}
+#marque-form hgroup{
+    float: left;
+    width: 47%;
+    height:auto;
+    margin: 0.1em;
+    padding: 0.3em;
+    background-color: #EDEDED;
+    box-shadow: 0em 0em 0.4em rgba(46,46,46,0.5);
+    //border: solid 0.1em;
+}
+#marque-form hgroup input{
+    float: right;
+    width: 70%;
+    height: 1.8em;
+    margin: auto;
+    border: dashed #EDEDED 0.1em;
+}
+#marque-form hgroup input[type='submit']{
+    width: 20%;
+}
+#marque-form hgroup input[type='checkbox']{
+    float: left;
+    width: 1.0em;
+    height: auto;
+    margin: 0.2em auto;
+}
+#marque-form hgroup em{
+    float: right;
+    color: crimson;
+    font-size: 0.7em;
+}
+#marque-form hgroup em:hover{
+    cursor: pointer;
+}
+#marque-form hgroup fieldset{
+    width: 94%;
+    margin: auto;
+    color: #666666;
+    border: solid #CCCCCC 0.1em;
+}
+#marque-form hgroup fieldset div{
+    width: 100%;
+    height: 28.4em;
+    margin: auto;
+    overflow: auto;
+    //border: solid 0.1em;
+}
+#marque-form hgroup fieldset ul{
+    width: 100%;
+    margin: auto;
+    padding: 0;
+    list-style-type: none;
+    //border: solid 0.1em;
+}
+#marque-form hgroup fieldset ul li{
+    width: 80%;
+    margin: auto;
+    //border: solid 0.1em;
+}
+#marque-form hgroup .close-win-app{
+    
+}

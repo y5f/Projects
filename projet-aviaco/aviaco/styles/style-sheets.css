@@ -1,0 +1,1174 @@
+h1,h2,h3,h4{
+   //position: absolute;
+   //z-index: 30;
+   //color: #FEFEFE;
+   //color: rgba(30,127,203,1.0);
+}
+body{
+    //position: absolute;
+    //background-image:url(img/back_carr_tr.png);
+    font-family: Calibri;
+    background-color: #FEFEFE;
+}
+header{
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    height: 5.9em;
+    background-color: #FEFEFE;
+    //border-bottom: solid 0.1em rgba(0,0,0,0.1);
+    overflow: hidden;
+    //border: solid 0.1em;
+}
+header .g-head{
+    width: 80%;
+    height: 5.9em;
+    margin: auto;
+    padding: 0;
+    border-bottom: solid rgba(0,121,175,0.5 ) 0.1em;
+}
+header .g-head img{
+    width: 6.0em;
+    height: 2.0em;
+    margin: -1.2em -0.2em;
+}
+header .g-head h3{
+    position: relative;
+    z-index: 20;
+    width: 100%;
+    height: 1.1em;
+    margin:2.1em auto;
+    text-align: right;
+    font-family: Eurostile;
+    color: rgba(0,121,175,1.0);
+    //border: solid 0.1em;
+}
+//-----  STYLE APPLIQUE AU SLIDER -------//
+section{
+    border: solid 0.5em;
+}
+section .slide-show{
+    float: left;
+    width: 100%;
+    height: 45.5em;
+    margin: 6.0em auto;
+    padding:0;
+    text-align: center;
+    color: buttonface;
+    //background-color: rgba(0,0,0,0.1);
+    //border: solid 0.1em;
+}
+section .slide-show .w-slide{
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 45.5em;
+    margin: auto;
+    padding: 0;
+    border:0;
+    //border: solid 0.1em;
+}
+section .slide-show .w-slide .slide{
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    padding:0;
+    text-align: center;
+    color: buttonface;
+    //background-color: rgba(0,0,0,0.1);
+    overflow:hidden;
+    //border: solid red 0.1em;
+    
+}
+/*--- LES FILM TRANSPARENT ------*/
+section .slide-show .w-slide .slide .film-tr{
+    position: absolute;
+    z-index: 10;
+    width: 80.1%;
+    height: 45.4em;
+    margin: auto;
+    //background-image: url(img/prec.png);
+    background-image: -moz-radial-gradient(30% 60%,ellipse farthest-side,transparent,#FEFEFE);
+    background-image: -webkit-radial-gradient(30% 70%,ellipse farthest-side,transparent,#FEFEFE);
+    background-image: -ms-radial-gradient(30% 60%,ellipse farthest-side,transparent,#FEFEFE);
+    background-image: -o-radial-gradient(30% 60%,ellipse farthest-side,transparent,#FEFEFE);
+    background-image: radial-gradient(30% 60%,ellipse farthest-side,transparent,#FEFEFE);
+    //border: solid 0.1em;
+    overflow: hidden;
+}
+section .slide-show .w-slide .slide .filtre{
+    position: absolute;
+    z-index: 5;
+    width: 80.0%;
+    height: 45.4em;
+    margin: auto;
+    background-image:url(img/back-style.png);
+    //border: solid 0.1em;
+}
+section .slide-show .w-slide .slide .slider{
+    position: relative;
+    width: 500%;
+    height: 45.4em;
+    //left: -0.2em;
+    margin: auto;
+    padding: 0;
+    //border: solid 0.1em crimson;
+}
+
+/*---- STYLE DES BOUTONS DE NAVIGATION ------*/
+section .slide-show .w-slide .slide hgroup{
+    position: absolute;
+    z-index: 90;
+    width: 5.9em;
+    height: auto;
+    margin: 1% 74%;
+    padding: 0;
+    //border: solid 0.1em;
+}
+section .slide-show .w-slide .slide hgroup img{
+    float: left;
+    width: 1.8em;
+    height: 1.8em;
+    //border-left: solid 0.1em rgba(251,252,250,1.0);
+    border: solid 0.1em rgba(0,121,175,0.9);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    //box-shadow:0.1em 0.1em 0.1em rgba(0,0,0,0.3); 
+}
+section .slide-show .w-slide .slide hgroup .prec{
+    margin: auto;
+}
+section .slide-show .w-slide .slide hgroup .suiv{
+    margin: auto 0.6em;
+}
+section .slide-show .w-slide .slide .slider figure{
+    float: left;
+    width: 20.0%;
+    height: 45.4em;
+    margin:0;
+    padding: 0;
+    //border: solid crimson 0.1em;
+}
+section .slide-show .w-slide .slide .slider figure img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin:auto;
+    padding: 0;
+    //border: solid red 0.1em;
+}
+section .slide-show .w-slide .slide .coment-slide{
+    position: absolute;
+    z-index: 20;
+    width: 29.9em;
+    height: 11.4em;
+    margin:1.8em 2.5em;
+    padding: 0;
+    background:rgba(0,121,175,0.9);
+    border-radius: 0.7em 0 0.7em 0;
+    
+}
+section .slide-show .w-slide .slide .slider figure .titre{
+    position: relative;
+    z-index: 20;
+    width: 35%;
+    height: auto;
+    margin-top:-20.8em;
+    margin-left: 63%;
+    padding: 0.1em;
+    text-align: left;
+    font-size: 2.0em;
+    color: rgba(118,200,241,1.0);
+    //border: solid 0.1em;
+}
+section figure figcaption{
+    position: absolute;
+    z-index: 30;
+    width: 23.6em;
+    height: 9.4em;
+    margin:-35.4em 3.0em;
+    padding: 1.3em;
+    color: #FEFEFE;
+    text-align: justify;
+    //font-family: Oswald;
+    font-size: 1.2em;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 19.0px;
+    //text-align: left;
+    
+    
+}
+section .slide-show .w-slide .slide .slider figure figcaption:before,
+section .slide-show .w-slide .slide .slider figure figcaption:after{
+    color: #FEFEFE;
+    //font-family: Oswald;
+    font-size: 1.3em;
+    line-height:0.2em;
+    margin-right:-0.4em;
+    vertical-align:-0.2em;
+    //border: solid 0.1em;
+}
+section .slide-show .w-slide .slide .slider figure figcaption:before{
+    content:open-quote;
+}
+section .slide-show .w-slide .slide .slider figure figcaption:after{
+    content:close-quote;
+}
+//--- LES DOUBLE QUTE -----
+blockquote{
+    width:auto;
+    margin:auto;
+    text-align: left;
+}
+blockquote:before, blockquote:after{
+    color: #798081;
+    //font-family: Oswald;
+    font-size: 1.3em;
+    line-height:0.2em;
+    margin-right:0.3em;
+    vertical-align:-0.1em;
+    //border: solid 0.1em;
+}
+blockquote:before{
+    //content:open-quote;
+}
+blockquote:after{
+    //content:close-quote;
+}
+/*---- FIN STYLE SLIDER -------*/
+section .menu{
+    position: absolute;
+    z-index: 50;
+    left:1.4em;
+    right: 1.4em;
+    padding: 0;
+    list-style-type: none;
+    //border: solid red 0.5em;
+}
+section .menu .sous-bloc{
+    width: 66%;
+    height: auto;
+    margin: auto;
+    //padding-left: 1.5em;
+    //border: solid 0.1em;
+}
+section .menu .sous-bloc .menu-details{
+    position: absolute;
+    width: 25%;
+    height: auto;
+    display: none;
+    top:-23.4em;
+    left:21.4em;
+    padding:0;
+    //border: solid 0.1em;
+}
+section .menu .sous-bloc .menu-details li{
+    display: inline-block;
+    width: 100%;
+    height: 3.6em;
+    margin: 0.2em auto;
+    padding: 1.0em;
+    list-style-type: none;
+    background:rgba(0,121,175,0.9);
+    box-shadow: 0.2em 0.2em 0.2em rgba(0,0,0,0.2);
+    //border: solid 0.1em;
+}
+section .menu .sous-bloc .menu-details li a{
+    text-decoration: none;
+    color: #FEFEFE;
+    text-transform: uppercase;
+}
+section .menu .sous-bloc .menu-details li:hover{
+    background-color: rgba(255,255,255,0.6);
+}
+section .menu .sous-bloc .menu-details li:hover a{
+    color: #23527c;
+}
+section .menu .sous-bloc .m-bloc{
+    float: left;
+    width: auto;
+    height: 4.2em;
+    margin: 0.4em;
+    padding-top: 1.4em;
+    padding-left: 1.8em;
+    padding-right: 1.8em;
+    text-align: center;
+    text-decoration: none;
+    color: #FEFEFE;
+    text-transform: uppercase;
+    background:rgba(0,121,175,0.9);
+    box-shadow: 0.2em 0.2em 0.2em rgba(0,0,0,0.2);
+    //border: solid 0.1em;
+}
+section .menu .sous-bloc .m-bloc:hover{
+    background-color: rgba(255,255,255,0.6);
+}
+section .menu .sous-bloc a:hover{
+    color: #23527c;
+}
+//-- lES PADDING DES BLOCS -------
+section .slide-show .w-slide .slide .menu .sous-bloc  .spec{
+    //margin-right: 0.9em;
+}
+section .slide-show .w-slide .slide .menu .sous-bloc .soc{
+    //margin-right: 0.9;
+}
+section .slide-show .w-slide .slide .menu .sous-bloc .acc{
+    //margin-right: 0.9em;
+}
+section .slide-show .w-slide .slide .menu .sous-bloc .ser{
+    //margin-right: 0.9em;
+}
+section .slide-show .w-slide .slide .menu .sous-bloc .stock{
+    //margin-right: 0.9em;
+}
+section .slide-show .w-slide .slide .menu .sous-bloc .contact{
+    //margin-right: 0.9em;
+}
+section .menu .sous-bloc a{ 
+    text-decoration: none;
+    color: #FEFEFE;
+    text-transform: uppercase;
+}
+
+section .panneau{
+    float: left;
+    width: 100%;
+    height: auto;
+    margin:-6.0em auto;
+    //border-bottom: 0.1em crimson;
+    //border: solid 0.1em;
+}
+section .panneau .blocs{
+    width: 80%;
+    height: auto;
+    margin: auto;
+    padding: 0;
+    list-style-type: none;
+    //border: solid 0.1em;
+}
+section .panneau .blocs .blk{
+    float: left;
+    left: 0;
+    height: 22.0em;
+    margin: auto;
+    margin-top: 1.3em;
+    padding: 0;
+    border: dashed 0.1em;
+}
+section .panneau .blocs .blk img{
+    position: absolute;
+    z-index: -10;
+    width: 100%;
+    height: 100%;
+    top:0;
+    //margin: auto;
+    padding: 0;
+    border: 0;
+}
+section .panneau .blocs figure{
+    //position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    padding: 0;
+    border: 0;
+}
+
+section .panneau .blocs .actu{
+    border: 0;
+    overflow: hidden;
+}
+section .panneau .blocs .actu .en-direct{
+    display: none;
+}
+section .panneau .blocs .actu h2{
+    position: absolute;
+    width: 60%;
+    height: auto;
+    margin: 0.4em 0.5em;
+}
+section .panneau .blocs .actu h2 a{
+    color: #FEFEFE;
+    //border: solid 0.1em;
+}
+section .panneau .blocs .actu h2 a:hover{
+    text-decoration: none;
+}
+section .panneau .blocs .actu .periode{
+    position: absolute;
+    width: auto;
+    margin: 1.6em 1.1em;
+    color:crimson;
+}
+section .panneau p{
+    position: absolute;
+    z-index: 30;
+    width: 100%;
+    height: 60%;
+    bottom: 0;
+    margin-bottom:-90%;
+    padding: 0.3em;
+    //font-family: Oswald;
+    font-size: 1.1em;
+    color: #FEFEFE;
+    background:rgba(0,121,175,0.6);
+    border-top: solid #FEFEFE 0.1em;
+}
+
+section .panneau .blocs .reg{
+    float: right;
+    border: 0;
+    overflow: hidden;
+}
+section .panneau .blocs .reg h2{
+    position: absolute;
+    z-index: 10;
+    width: 60%;
+    height: auto;
+    margin: auto 0.5em;
+}
+section .panneau .blocs .reg h2 a{
+    color: #FEFEFE;
+    //border: solid 0.1em;
+}
+section .panneau .blocs .reg h2 a:hover{
+    text-decoration: none;
+}
+section .panneau .blocs .helico,
+section .panneau .blocs .b-stock,
+section .panneau .blocs .libre,
+section .panneau .blocs .map,
+section .panneau .blocs .part{
+    //width: 0%;
+    //border: solid 0.1em;
+}
+section .panneau .blocs .helico{
+    border: 0;
+    overflow: hidden;
+}
+section .panneau .blocs .helico h2{
+    position: absolute;
+    z-index: 10;
+    width: 60%;
+    height: auto;
+    margin: auto 0.5em;
+}
+section .panneau .blocs .helico h2 a{
+    color: #FEFEFE;
+    //border: solid 0.1em;
+}
+section .panneau .blocs .helico h2 a:hover{
+    text-decoration: none;
+}
+section .panneau .blocs .b-stock{
+    border: 0;
+    overflow: hidden;
+}
+section .panneau .blocs .b-stock h2{
+    position: absolute;
+    z-index: 10;
+    width: 60%;
+    height: auto;
+    margin: auto 0.5em;
+}
+section .panneau .blocs .b-stock h2 a{
+    color: #FEFEFE;
+    //border: solid 0.1em;
+}
+section .panneau .blocs .b-stock h2 a:hover{
+    text-decoration: none;
+}
+section .panneau .blocs .libre{
+    border: 0;
+    overflow: hidden;
+}
+section .panneau .blocs .map{
+    border: 0;
+}
+section .panneau .blocs .part{
+    float: right;
+    border: 0;
+    padding: 0;
+    overflow: hidden;
+    //border: solid 0.1em;
+}
+section .panneau .blocs .part .pt{
+    float: right;
+    width: 100%;
+    height: auto;
+    margin:-0.7em auto;
+    margin-right: -1.0em;
+    padding: 0;
+    //border: solid red 0.1em;
+}
+section .panneau .blocs .part .pt figure{
+    float: left;
+    width: 48.6%;
+    height: 10.3em;
+    margin:0.7em;
+    margin-left: 0;
+    //border: solid red 0.1em;
+}
+section .panneau .blocs .part .pt figure img{
+    //float: left;
+    width: 48.5%;
+    height: 10.3em;
+    margin: auto;
+}
+section .panneau .blocs .part .pt p{
+    position: absolute;
+    z-index: 40;
+    display: none;
+    top:1.1em;
+    left:11.0em;
+    width: 60%;
+    height: 12.0em;
+    margin: auto;
+    border: 0;
+    border-left: solid #FBFCFA 0.4em;
+    border-right: solid #FBFCFA 0.4em;
+}
+//######### STYEL DU PORTFOLIO ############
+section{
+   // float: left;
+    //border: solid 0.3em;
+}
+section .main-pane{
+    float: left;
+    width: 100%;
+    height: auto;
+    margin:auto;
+    padding:0;
+    text-align: justify;
+    color: buttonface;
+    //border: solid 0.1em;
+}
+section .main-pane .f-panneau{
+    width: 80%;
+    height: auto;
+    margin:6.0em auto;
+    padding: 0;
+    //border: solid red 0.1em;
+    //background-image: url(img/prec.png);
+    //border: solid 0.1em;
+}
+section .main-pane .f-panneau .main-menu{
+    position: fixed;
+    z-index: 27;
+    top:6.0em;
+    left: 0;
+    right: 0;
+    height: 3.6em;
+    //border: solid 0.1em;
+}
+section .main-pane .f-panneau .main-menu .sous-bloc{
+    position: relative;
+    z-index: 100;
+    width: 60%;
+    height: 6.4em;
+    margin: auto;
+    padding: 0;
+    //border: solid 0.1em;
+    
+}
+section .main-pane .f-panneau .main-menu .sous-bloc .menu-details{
+    position: absolute;
+    z-index: 50;
+    width: 35%;
+    height: auto;
+    display: none;
+    top:7.0em;
+    right: -9.0em;
+    //border: solid 0.1em;
+}
+section .main-pane .f-panneau .main-menu .sous-bloc .menu-details li{
+    display: inline-block;
+    width: 100%;
+    height: 3.0em;
+    margin: 0.2em;
+    padding: 0.3em;
+    padding-top:0.9em; 
+    list-style-type: none;
+    text-align: right;
+    background:rgba(0,121,175,0.9);
+    box-shadow: 0.2em 0.2em 0.2em rgba(0,0,0,0.2);
+    //border: solid 0.1em;
+}
+section .main-pane .f-panneau .main-menu .sous-bloc .menu-details a li{
+    text-decoration: none;
+    color: #FEFEFE;
+    text-transform: uppercase;
+}
+section .main-pane .f-panneau .main-menu .sous-bloc .menu-details li:hover{
+    background-color: rgba(255,255,255,0.6);
+    color: #23527c;
+}
+section .main-pane .f-panneau .main-menu .sous-bloc .menu-details a:hover{
+    //color: #23527c;
+}
+section .main-pane .f-panneau .main-menu .sous-bloc .m-bloc{
+    float: left;
+    height: 3.4em;
+    width: 12%;
+    margin: -0.2em 0.3em;
+    padding-top: 0.9em;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FEFEFE;
+    background:rgba(0,121,175,0.9);
+    box-shadow: 0.2em 0.2em 0.2em rgba(0,0,0,0.2);
+    //border: solid 0.1em;  
+}
+section .main-pane .f-panneau .main-menu .sous-bloc .m-bloc:hover{
+    text-decoration: none;
+    color: #444;
+    background-color: rgba(255,255,255,0.5);
+}
+section .main-pane .f-panneau .main-menu .sous-bloc a:hover{
+    color: #262626;
+}
+section .main-pane .f-panneau .main-menu .sous-bloc a{
+    color: #FEFEFE;
+}
+section .main-pane .f-panneau nav ul{
+    width: 80%;
+    //border: solid red 0.1em;
+    margin: auto;
+    list-style-type: none;
+}
+section .main-pane .f-panneau nav ul li{
+    float: left;
+    width: auto;
+    height: 2.4em;
+    margin: auto;
+    padding: 0.4em;
+    padding-left: 0.4em;
+    padding-right: 0.4em;
+}
+section .main-pane .f-panneau .portfolio{
+    float: left;
+    width: 100%;
+    height: 50.0em;
+    margin:auto;
+    padding: 0;
+    //border: solid red 0.1em;
+}
+section .main-pane .f-panneau .portfolio .filtre{
+    position: absolute;
+    z-index: 25;
+    width: 80%;
+    top: 6.0em;
+    height: 50.0em;
+    margin: auto;
+    padding: 0;
+    background-image:url(img/back-style.png);
+}
+
+section .main-pane .f-panneau .portfolio .trans-folio{
+    position: absolute;
+    z-index: 20;
+    width: 80%;
+    top: 6.0em;
+    height: 50.0em;
+    margin: auto;
+    padding: 0;
+    background-image: -moz-radial-gradient(30% 60%,ellipse farthest-side,transparent,#FEFEFE);
+    background-image: -webkit-radial-gradient(30% 70%,ellipse farthest-side,transparent,#FEFEFE);
+    background-image: -ms-radial-gradient(30% 60%,ellipse farthest-side,transparent,#FEFEFE);
+    background-image: -o-radial-gradient(30% 60%,ellipse farthest-side,transparent,#FEFEFE);
+    background-image: radial-gradient(30% 60%,ellipse farthest-side,transparent,#FEFEFE);
+    //border: solid red 0.1em;
+    //background: coral;
+}
+section .main-pane .f-panneau .portfolio img{
+    //float: left;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    //box-shadow: 0.2em 0.2em 0.2em rgba(0,0,0,0.5);
+    //border: 0.4em solid #adadad;
+    //border-radius: 0.2em 0.2em 0 0;
+}
+section .main-pane .f-panneau .portfolio figcaption{
+    //font-family: Oswald;
+    font-size: 1.1em;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 19.0px;
+    color: #FEFEFE;
+}
+section .main-pane .f-panneau .portfolio .details,
+section .main-pane .f-panneau .portfolio .spec,
+section .main-pane .f-panneau .portfolio .regle,
+section .main-pane .f-panneau .portfolio .capt-folio{
+    //position: relative;
+    float: left;
+    z-index: 21;
+    width: 33.4em;
+    height: auto;
+    margin: -39.1em 2.0em;
+    padding: 1.6em;
+    //background:rgba(34,66,124,0.6);
+    background:rgba(0,121,175,0.9);
+    text-align: justify;
+    font-size: 1.1em;
+    //background-color: rgba(30,127,203,1.0);
+    border-radius: 0.7em 0 0.7em 0;
+    box-shadow: 0.1em 0.1em 0.1em rgba(0,0,0,0.4);
+    //border: solid 0.1em;
+}
+section .main-pane .f-panneau .portfolio .contact-form{
+    position: relative;
+    z-index: 25;
+    width: 96%;
+    height: 38.6em;
+    margin: -40.1em auto;
+    padding: 0;
+    //background:rgba(34,66,124,0.6);
+    //background:rgba(0,121,175,0.9);
+    background-color: #FEFEFE;
+    text-align: justify;
+    font-size: 1.1em;
+    //background-color: rgba(30,127,203,1.0);
+    //border-radius: 0.7em 0 0.7em 0;
+    box-shadow: 0.1em 0.1em 0.1em rgba(0,0,0,0.4);
+    //border: solid 0.1em;
+}
+section .main-pane .f-panneau .portfolio .contact-form form{
+    float: left;
+    width: 35%;
+    height: 38.6em;
+    padding: 1.6em;
+    background:rgba(0,121,175,0.9);
+    //border: solid 0.1em;
+}
+section .main-pane .f-panneau .portfolio .contact-form form input{
+    color: #245269;
+    padding: 0.1em;
+}
+section .main-pane .f-panneau .portfolio .contact-form form p{
+    width: 100%;
+    //border: solid 0.1em;
+}
+section .main-pane .f-panneau .portfolio .contact-form form .err{
+    font-size: 0.8em;
+    color: #ac2925;
+}
+section .main-pane .f-panneau .portfolio .contact-form form .isOK{
+    font-size: 0.8em;
+    color: darkgreen;
+}
+section .main-pane .f-panneau .portfolio .contact-form form img{
+    width: 6.8em;
+}
+section .main-pane .f-panneau .portfolio .contact-form form .zone{
+    float: right;
+    width: 65%;
+    margin: -0.3em auto;
+}
+section .main-pane .f-panneau .portfolio .contact-form form textarea{
+    width: 100%;
+    color: #245269;
+    padding: 0.3em;
+}
+section .main-pane .f-panneau .portfolio .contact-form form a{
+    color: #FEFEFE;
+}
+section .main-pane .f-panneau .portfolio .contact-form form .submit{
+    float: right;
+    width: 20%;
+    border: 0;
+}
+section .main-pane .f-panneau .portfolio .contact-form .map-contact{
+    float: left;
+    width: 65%;
+    padding:0.1em 1.6em;
+    color: #444;
+    //border: solid red 0.1em;
+}
+section .main-pane .f-panneau .portfolio .contact-form .map-contact h3{
+    font-size: 1.0em;
+}
+section .main-pane .f-panneau .portfolio .contact-form .map-contact .map-infos{
+    width: 100%;
+    border-bottom: solid rgba(0,121,175,0.9) 0.1em;
+}
+section .main-pane .f-panneau .portfolio .contact-form .map-contact #map{
+    width: 100%;
+    height: 26.0em;
+    margin: 1.0em auto;
+    //border: solid 0.1em;
+}
+section .main-pane .f-panneau .port-form{
+    float: left;
+    width: 100%;
+    height: auto;
+    margin: -37.96em 19.0em;
+    padding:1.0em;
+    padding-bottom: 2.4em;
+    //font-family: Oswald;
+    font-size: 1.1em;
+    color: #222;
+    //background-color:#FBFCFA;
+}
+section .main-pane .f-panneau .bloc{
+    position: absolute;
+    z-index: 40;
+    width: 23%;
+    height: auto;
+    top:13.0em;
+    right: 11.0em;
+    margin: auto;
+    //border: solid red 0.1em;
+}
+section .main-pane .f-panneau .bloc li{
+    float: left;
+    width: 100%;
+    height: 3.0em;
+    margin: 0.2em;
+    padding: 0.3em;
+    padding-top:0.9em; 
+    text-transform: uppercase;
+    text-align: right;
+    list-style-type: none;
+    background-color: rgba(0,121,175,0.9);
+    //border: solid 0.1em;
+}
+section .main-pane .f-panneau .bloc a{
+    color: #FEFEFE;
+}
+section .main-pane .f-panneau .bloc li:hover{
+    //background-color: rgba(255,255,255,0.5);
+}
+section .main-pane .f-panneau .bloc a:hover li{
+     color: #262626;
+     background-color: rgba(255,255,255,0.5);
+}
+section .main-pane .f-panneau .spec-form{
+    float: left;
+    width: 100%;
+    height: auto;
+    margin: -9em auto;
+    padding:1.0em;
+    //font-family: Oswald;
+    font-size: 1.1em;
+    color: #222;
+    //background-color:#FBFCFA;
+    //border: solid 0.1em;
+}
+section .main-pane .f-panneau .spec-form ul{
+    position: relative;
+    z-index: 40;
+    width: 70%;
+    height: auto;
+    margin: auto;
+    //border: solid 0.1em red;
+}
+section .main-pane .f-panneau .spec-form ul li{
+    float: left;
+    width: 27%;
+    height: 3.1em;
+    margin: 0.2em 1.2em;
+    padding-top: 0.7em;
+    list-style-type: none;
+    text-align: center;
+    box-shadow: 0.1em 0.1em 0.2em rgba(0,0,0,0.6);
+}
+
+section .main-pane .f-panneau .form-details{
+    float: left;
+    width: 100%;
+    margin:4.3em auto;
+    padding: 1.0em;
+    padding-bottom: 2.5em;
+    background-color:#FBFCFA;
+    
+}
+section .main-pane .f-panneau .form-details figure{
+    float: left;
+    width: 23.0%;
+    height: 17.0em;
+    margin: 0.7em;
+    overflow: hidden;
+    //border: solid red 0.1em;
+}
+section .main-pane .f-panneau .form-details figure img{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    //border: solid 0.3em;
+}
+section .main-pane .f-panneau .form-details figure figcaption{
+    position: relative;
+    width: 100%;
+    height: 17.0em;
+    margin: auto;
+    padding: 1.4em;
+    padding-top: 3.7em;
+    text-align: justify;
+    background-color: rgba(0,0,0,0.5);
+    //border: solid 0.1em red;
+}
+section .main-pane .f-panneau .form-details figure figcaption a{
+    text-decoration: none;
+    color: #FBFCFA;
+}
+section .main-pane .f-panneau .form-details figure label{
+    position:absolute;
+    width: 17.95%;
+    margin:auto;
+    padding: 0.4em;
+    background-color: rgba(0,121,175,1.0);
+    //border: solid 0.1em;
+}
+//##########  STYLE POUR LE FOOTER ########
+footer{
+    //border: solid 0.1em;
+}
+footer .foot{
+    float: left;
+    width: 100%;
+    height:auto;
+    margin:auto;
+    padding:0;
+    //border: solid 0.1em;
+}
+footer .foot .wrapper{
+    width: 80%;
+    height: auto;
+    margin: 9.0em auto;
+}
+footer .foot .wrapper .b-menu{
+    float: left;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    background:rgba(34,66,124,1.0);
+}
+footer .foot .wrapper .b-menu .bas-menu{
+    float: left;
+    width: 100%;
+    height:auto;
+    margin: auto;
+    padding: 0;
+    padding-left: 1.2em;
+    font-family:Oswald;
+    font-size: 1.0em;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: lighter;
+    line-height: 15.3999996185303px;
+    color: rgba(255,255,255,0.9);
+    background-color: rgba(0,121,175,1.0);
+    //border: solid red 0.1em;
+}
+footer .foot .wrapper .b-menu .bas-menu li{
+    float: left;
+    width: 12.0em;
+    height: auto;
+    margin: 1.0em 0.6em;
+    list-style-type: none;
+}
+footer .foot .wrapper .b-menu .bas-menu li ul{
+    width: 90%;
+    margin: 0.3em -3.4em;
+    font-family: arial;
+    font-style:  normal;
+    font-variant: normal;
+    line-height: 1.3em;
+    font-weight: lighter;
+}
+footer .foot .wrapper .b-menu .bas-menu li ul li{
+    margin: 0.2em;
+    margin-left: 0.6em;
+    font-family:Capsuula;
+    font-weight: lighter;
+    font-size: 1.1em;
+    
+}
+
+footer .foot .wrapper .b-menu .bas-menu li ul li ul{
+    //display: none;
+    margin: auto;
+    //padding: 0;
+    height:auto;
+    //border: solid 0.1em;
+}
+footer .foot .wrapper .b-menu .bas-menu li ul li ul li{
+    width: 10.0em;
+    height: auto;
+    margin: 0 -2.4em;
+    font-size: 1.0em;
+    //border: solid 0.1em;
+}
+footer .foot .wrapper .b-menu .bas-menu li ul li ul li ul{
+    //margin: auto;
+    //height: auto;
+    //border: solid 0.1em;
+}
+footer .foot .wrapper .b-menu .bas-menu li ul a{
+    color: rgba(255,255,255,0.6);
+}
+footer .foot .wrapper .b-menu .bas-menu li ul a:hover{
+    color: #FEFEFE;
+}
+
+footer .foot .wrapper .b-menu .lbr{
+    float: left;
+    width: 100%;
+    height: 1.4em;
+    margin: auto;
+    //background:rgba(34,66,124,1.0);
+    border:0;
+}
+footer .foot .wrapper .soc-wrapper{
+    float: left;
+    width: 100%;
+    height:8.4em;
+    margin:auto;
+    font-family: Calibri;
+    background-color: #FBFCFA;
+    //border: solid 0.1em;
+}
+
+footer .foot .wrapper .soc-wrapper .network{
+    width: 32%;
+    height: 4.9em;
+    margin:1.6em auto;
+    //border:  solid 0.1em;
+}
+footer .foot .wrapper .soc-wrapper .network figure{
+    float: left;
+    width: 4.2em;
+    margin: auto 1.0em;
+}
+footer .foot .wrapper .soc-wrapper .network img{
+    float: left;
+    width: 4.2em;
+    height: 4.2em;
+    padding: 0;
+    border-radius: 50%;
+}
+footer .foot .wrapper .soc-wrapper .network p{
+    margin: auto;
+    text-align: center;
+    //border: solid 0.1em;
+    //margin-bottom: 0.5em;
+}
+footer .foot .wrapper .legal{
+    margin:7.4em 0.4em;
+    //border: solid 0.1em;
+}
+footer .foot .wrapper .legal h3{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    color: #FBFCFA;
+}
+footer .foot .wrapper .legal .copy,
+footer .foot .wrapper .legal .cond{
+    float:left;
+    margin:0.6em 1.0em;
+}
+
+//--- Une font chrgé sur la racine ----
+//------ Capsuula -----------
+@font-face {
+    font-family: "Capsuula";
+    src: url('fonts/Capsuula.ttf');
+}
+@-webkit-font-face {
+    font-family: "Capsuula";
+    src: url('fonts/Capsuula.ttf');
+}
+@-moz-font-face {
+    font-family: "Capsuula";
+    src: url('fonts/Capsuula.ttf');
+}
+@-ms-font-face {
+    font-family: "Capsuula";
+    src: url('fonts/Capsuula.ttf');
+}
+@-o-font-face {
+    font-family: "Capsuula";
+    src: url('fonts/Capsuula.ttf');
+}
+@font-face {
+    font-family: "Capsuula";
+    font-style: italic;
+    src: url('fonts/Capsuula.ttf');
+}
+@font-face {
+    font-family: "Capsuula";
+    font-weight: bold;
+    src: url('fonts/Capsuula.ttf');
+}
+//---- Eurostile ---------
+@font-face {
+    font-family: "Eurostile";
+    src: url('fonts/eurostile.ttf');
+}
+@-webkit-font-face {
+    font-family: "Eurostile";
+    src: url('fonts/eurostile.ttf');
+}
+@-moz-font-face {
+    font-family: "Eurostile";
+    src: url('fonts/eurostile.ttf');
+}
+@-ms-font-face {
+    font-family: "Eurostile";
+    src: url('fonts/eurostile.ttf');
+}
+@-o-font-face {
+    font-family: "Eurostile";
+    src: url('fonts/eurostile.ttf');
+}
+@font-face {
+    font-family: "Eurostile";
+    font-style: italic;
+    src: url('fonts/eurostile.ttf');
+}
+@font-face {
+    font-family: "Eurostile";
+    font-weight: bold;
+    src: url('fonts/eurostile.ttf');
+}
+//---- Calibri ---------
+@font-face {
+    font-family: "Calibri";
+    src: url('fonts/Calibri.ttf');
+}
+@-webkit-font-face {
+    font-family: "Calibri";
+    src: url('fonts/Calibri.ttf');
+}
+@-moz-font-face {
+    font-family: "Calibri";
+    src: url('fonts/Calibri.ttf');
+}
+@-ms-font-face {
+    font-family: "Calibri";
+    src: url('fonts/Calibri.ttf');
+}
+@-o-font-face {
+    font-family: "Calibri";
+    src: url('fonts/Calibri.ttf');
+}
+@font-face {
+    font-family: "Calibri";
+    font-style: italic;
+    src: url('fonts/Calibri.ttf');
+}
+@font-face {
+    font-family: "Calibri";
+    font-weight: bold;
+    src: url('fonts/Calibri.ttf');
+}

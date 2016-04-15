@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<config>
+    <propel>
+        <database>
+            <connections>
+                <connection id="appliaviaco">
+                    <adapter>mysql</adapter>
+                    <classname>Propel\Runtime\Connection\ConnectionWrapper</classname>
+                    <dsn>mysql:host=localhost;dbname=appliaviaco;charset=UTF8</dsn>
+                    <user>appliadmin</user>
+                    <password>NelsonMandela1</password>
+                </connection>
+            </connections>
+        </database>
+        <runtime>
+            <defaultConnection>appliaviaco</defaultConnection>
+            <connection>appliaviaco</connection>
+        </runtime>
+        <generator>
+            <defaultConnection>appliaviaco</defaultConnection>
+            <connection>appliaviaco</connection>
+        </generator>
+    </propel>
+</config>

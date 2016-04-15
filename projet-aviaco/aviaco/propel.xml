@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<config>
+    <propel>
+        <database>
+            <connections>
+                <connection id="aviaco">
+                    <adapter>mysql</adapter>
+                    <classname>Propel\Runtime\Connection\ConnectionWrapper</classname>
+                    <dsn>mysql:host=localhost;dbname=aviaco;charset=UTF8</dsn>
+                    <user>aviaco</user>
+                    <password>aviaco</password>
+                </connection>
+            </connections>
+        </database>
+        <runtime>
+            <defaultConnection>aviaco</defaultConnection>
+            <connection>aviaco</connection>
+        </runtime>
+        <generator>
+            <defaultConnection>aviaco</defaultConnection>
+            <connection>aviaco</connection>
+        </generator>
+    </propel>
+</config>

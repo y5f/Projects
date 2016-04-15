@@ -1,0 +1,15 @@
+ligne = 384
+colonne = 512
+tInitial = ligne*colonne*3
+img=IO.readlines("imageCompressee.txt")
+s = 0
+t = img.length
+for i in 0...t
+  tt = img[i].split(" ").length
+  for j in 0...tt
+    s += 1
+  end
+end
+tFinal = s
+tauCompression = ((tInitial-tFinal).to_f/tInitial)*100
+puts tauCompression

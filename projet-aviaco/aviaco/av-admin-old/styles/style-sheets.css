@@ -1,0 +1,651 @@
+h1,h2,h3,h4{
+   //position: absolute;
+   //z-index: 30;
+   //color: #FEFEFE;
+   //color: rgba(30,127,203,1.0);
+}
+a{
+    color: #9d9d9d;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+body{
+    //position: absolute;
+    //background-image:url(img/back_carr_tr.png);
+    font-family: Calibri;
+    color: #444;
+    background-color: #FEFEFE;
+}
+body > form{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 2.6em;
+    background-color: #EDEDED;
+}
+body > form hgroup{
+    width: 30%;
+    height: 22.3em;
+    margin: auto;
+    padding: 1.6em;
+    border-radius: 0.6em;
+    background-color: #FEFEFE;
+    box-shadow: 0.1em 0.1em 0.1em rgba(46,46,46,0.1);
+    -webkit-box-shadow: 0.1em 0.1em 0.1em rgba(46,46,46,0.1);
+    -moz-box-shadow: 0.1em 0.1em 0.1em rgba(46,46,46,0.1);
+    -ms-box-shadow: 0.1em 0.1em 0.1em rgba(46,46,46,0.1);
+    -o-box-shadow: 0.1em 0.1em 0.1em rgba(46,46,46,0.1);
+}
+body > form hgroup .notifErr{
+    color: crimson;
+}
+body > form hgroup .logo{
+    width: 40%;
+    margin: auto;
+    //border: solid 0.1em;
+}
+body > form hgroup img{
+    width: 100%;
+    margin: auto;
+    //border: solid 0.1em;
+}
+body > form hgroup fieldset{
+    width: 91%;
+    margin: auto;
+    margin: auto;
+}
+body > form fieldset label{}
+body > form fieldset .lab{
+    display: inline-block;
+    width: 30%;
+    text-align: right;
+    //border: solid 0.1em;
+}
+body > form fieldset input{
+    width: 66%;
+    height: 2.0em;
+    //border: 0;
+}
+body > form fieldset input[type='submit']{
+    float: right;
+    width: 30%;
+    margin: auto 0.5em;
+}
+#h-wrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2.4em;
+    background-color: #262626;
+    //border: solid 0.1em;
+}
+#h-wrapper hgroup{
+    float: left;
+    width: 49.0%;
+    padding: 0;
+    //border: solid 0.1em;
+}
+#h-wrapper hgroup li img{
+    float: left;
+    width: 1.8em;
+    height: 1.2em;
+    margin: auto;
+    margin-right: 0.2em;
+    border: 0;
+}
+#h-wrapper hgroup ul{
+    float: left;
+    margin: auto;
+    padding: 0.5em;
+    //border: solid 0.1em;
+}
+#h-wrapper hgroup li{
+    float: left;
+    list-style-type: none;
+}
+#h-wrapper a{
+    color: #204d74;
+    //border: solid red 0.1em;
+}
+#h-wrapper .user-bloc{
+    float: right;
+    width: 30%;
+    height: 2.2em;
+    padding: 0;
+    color: #269abc;
+    //border: solid red 0.1em;
+    
+}
+#h-wrapper .user-bloc p{
+    float: left;
+    width: 48%;
+    height: 1.8em;
+    margin: 0.2em;
+    padding: 0.2em;
+    //border: solid 0.1em #269abc;
+}
+#h-wrapper .user-bloc .log-in{
+    width: 74%;
+    padding: 0.5em 0;
+    text-align: right;
+}
+#h-wrapper .user-bloc .log-bh{
+    width: 16%;
+}
+#h-wrapper .user-bloc p img{
+    float: right;
+    width: 48%;
+}
+#h-wrapper .user-bloc ul{
+    position: absolute;
+    z-index: 20;
+    display: none;
+    width: 15%;
+    height: 3.4em;
+    top:3.2em;
+    right: 0;
+    margin: auto;
+    padding: 0.4em;
+    background-color: #EDEDED;
+    box-shadow: 0.1em 0.1em 0.1em rgba(46,46,46,0.1);
+    //border: solid 0.1em red;
+}
+#h-wrapper .user-bloc ul:before{
+    position: absolute;
+    z-index: 30;
+    top:-0.5em;
+    right: 1.9em;
+    width: 1%;
+    content: '';
+    border-right: 0.4em solid transparent;
+    border-left: 0.4em solid transparent;
+    border-bottom: 0.6em #EDEDED solid;
+    display: block;
+}
+#h-wrapper .user-bloc ul li{
+    float: left;
+    width: 100%;
+    margin: auto;
+    padding: 0.2em;
+    //border: solid 0.1em;
+}
+#b-wrapper{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top:2.4em;
+    height: auto;
+    //border: solid 0.1em;
+}
+aside{
+    float: left;
+    width:15%;
+    background-color: #444;
+    padding-bottom: 0.3em;
+    
+    //border: solid yellow 0.1em;
+}
+aside ul{
+    padding: 0;
+}
+aside > ul{
+    float: left;
+    width: 100%;
+    margin: 0.2em auto;
+    //border: solid red 0.1em;
+}
+aside ul > li{
+    position: relative;
+    left: 0;
+    width:90%;
+    padding: 0;
+    margin: auto;
+    list-style-type: none;
+    //border: solid 0.1em;
+}
+aside ul li ul{
+    float:left;
+    display:block;
+    width:100%;
+    height: auto;
+    margin:auto;
+    padding:0.3em;
+    //border:solid blue 0.1em;
+}
+aside ul li ul li{
+    height:1.0em;
+    margin: auto 0.9em;
+    list-style-type: none;
+    color: #9d9d9d;
+   //border:solid red 0.1em;
+}
+aside ul li ul li:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+aside ul label{
+    float: left;
+    width: 100%;
+    margin: 0.1em auto;
+    padding: 0.2em;
+    padding-left: 0.6em;
+    background-color: #262626;
+    color: #FEFEFE;
+    text-transform: uppercase;
+}
+
+/* 
+  css appliqué au conteneur principale du bloc milieu
+*/
+
+section{
+    float: right;
+    width: 83%;
+    height:auto;
+    margin:auto 0.4em;
+    padding: 0.3em;
+    //border:solid 0.1em;
+}
+section input[type='text'],select{
+    height: 1.8em;
+    margin: auto;
+    padding: 0.3em;
+    border: solid #EDEDED 0.1em;
+}
+section select{
+    margin: 0.2em auto;
+    border: 0;
+    background-color: #9d9d9d;
+    color: #204d74;
+}
+section input[type='submit']{
+    float: right;
+    width: 20%;
+    margin: 0.2em;
+    border: 0;
+}
+section hgroup{
+    float:left;
+    width:32.8%;
+    height:auto;
+    margin: 0.4em;
+    padding: 0.3;
+    border:dashed 0.1em;
+    
+}
+
+section hgroup fieldset{
+    width:95%;
+    height:14.0em;
+    margin:auto;
+    padding:0.2em;
+}
+section hgroup fieldset > ul{
+    float: left;
+    width:93%;
+    height:10.3em;
+    margin: auto;
+    padding: 0.6em;
+    list-style-type: none;
+    overflow: auto;
+    //border:solid 0.1em red ;
+}
+section hgroup fieldset > input{
+    float: right;
+}
+section hgroup em:hover{
+    cursor: pointer;
+    color: #444;
+    text-decoration: underline;
+}
+section hgroup fieldset > ul li{
+    
+}
+section .sel{
+    width: 24%;
+    height: auto;
+}
+section .user-form{
+    float: left;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    padding: 0.1em;
+    border: solid 0.1em;
+}
+section .user-form hgroup{
+    float: left;
+    width: 50%;
+    margin: 0.3em;
+    padding: 0.2em;
+    border: 0;
+}
+section .user-form hgroup fieldset{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 0.4em;
+    padding: 0.4em;
+}
+section .user-form .deteils{
+    width: 59%;
+}
+section .user-form hgroup fieldset p{
+    float: left;
+    width: 49%;
+    margin: 0.1em;
+    padding: 0;
+    //border: solid 0.1em;
+}
+section .user-form hgroup fieldset p label{
+    //border: solid 0.1em red;
+}
+section .user-form hgroup fieldset p .lab{
+    display: inline-block;
+    width: 40%;
+    margin: 0.1em;
+    padding: 0.1em;
+    text-align: right;
+}
+section .user-form hgroup fieldset p input,
+section .user-form hgroup fieldset p select{
+    display: inline-block;
+    position: relative;
+    width: 54%;
+}
+section .user-form hgroup fieldset input[type='submit']{
+    float: right;
+    width: 15%;
+    margin:1.0em 0.6em;
+}
+section .user-form .list-user{
+    float: right;
+    width: 46%;
+    height: auto;
+    margin: auto;
+    padding: 0.2em;
+    //border: dashed 0.1em;
+}
+section .user-form .list-user table{
+    float: left;
+    width: 100%;
+    height: auto;
+    margin: 0.9em auto;
+    //border: dashed 0.1em;
+}
+section .user-form .list-user table tr:hover{
+    text-decoration: underline;
+}
+section .pub-form{
+    float: left;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    padding: 0;
+    border:0;
+}
+section .pub-form .pub-mod{
+    width: 65%;
+    height: 12.8em;
+    margin: 0.4em auto;
+    //padding: 0.5em;
+    padding-top: 0.6em;
+    //border: 0;
+}
+section .pub-form .pub-mod p{
+    float: left;
+    width: 58%;
+    margin: 0.4em auto;
+    padding: 0;
+    //border: solid 0.1em;
+}
+section .pub-form .pub-mod .p-e-s{
+    float: right;
+    margin: -6.2em auto;
+    width: 40%;
+}
+section .pub-form .pub-mod .p-e-s .lab{
+    width: 60%;
+}
+section .pub-form .pub-mod label{}
+section .pub-form .pub-mod .lab{
+    display: inline-block;
+    width: 42%;
+    //border: dashed 0.1em;
+}
+section .pub-form .pub-mod input{
+    width: 53%
+}
+section .pub-form .pub-mod input[type='submit']{
+    float: right;
+    width: 30%;
+    margin: 0.2em;
+}
+section .pub-form .art-dep{
+    width: 65%;
+    height: auto;
+    margin: auto;
+    padding: 0.0em;
+    border: 0;
+}
+section .pub-form .art-dep fieldset{
+    float: right;
+    width: 47%;
+    height: 7.0em;
+    margin: 0.2em;
+    padding: 0.2em;
+}
+section .pub-form fieldset ul{
+    //border: dashed 0.1em;
+}
+section .pub-form fieldset li{
+    float: left;
+    width: 100%;
+    margin: 0.1em auto;
+    text-align: left;
+    border: solid 0.1em;
+}
+section .pub-form .art-dep hgroup{
+    width: 100%;
+    height: 6.0em;
+    margin: auto;
+    padding: 0.2em;
+    border: 0;
+}
+section .pub-form .art-dep hgroup p{
+    display: inline-block;
+    width: 49%;
+    margin: 0.2em auto;
+    padding: 0;
+    //border: dashed 0.1em;
+}
+section .pub-form .art-dep hgroup p label{}
+section .pub-form .art-dep hgroup p .lab{
+    display: inline-block;
+    width: 39%;
+    margin: 0.2em auto;
+    text-align: right;
+    //border: solid 0.1em;
+}
+section .pub-form .art-dep hgroup p select{
+    width: 30%;
+}
+section .pub-form .art-dep hgroup p .selec{
+    text-align: left;
+    width: 17%;
+}
+section .pub-form .art-dep hgroup p input{
+    width: 55%;
+    margin: 0.2em auto;
+}
+section .pub-form .art-dep ul{
+    //border: dashed 0.1em;
+    height: 4.5em;
+}
+section #art-list{
+    border: dashed 0.1em;
+}
+section #art-list table{
+    float: left;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    padding: 0;
+    //border: solid 0.1em red;
+}
+section #art-list table input{
+    width: 8%;
+    margin: auto;
+    background-color: transparent;
+    border-right: solid #269abc 0.1em;
+}
+section #art-list table input:hover{
+    cursor: pointer;
+    border: solid 0.2em crimson;
+}
+section #art-list table .edit{
+    background-image: url(img/edit.png);
+    background-repeat: no-repeat;
+}
+section #art-list table .sup{
+    background-image: url(img/delete.png);
+    background-repeat: no-repeat;
+}
+section #art-list table td{
+    margin: auto;
+    border: solid #245269 0.1em;
+}
+section #art-list table tr:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+section .new-art{
+    float:right;
+    width: 100%;
+    margin: auto;
+    padding: 0;
+    //border: solid 0.1em;
+}
+section .new-art .h-art{
+    float: left;
+    width: 97.5%;
+    height: 4.6em;
+    margin: auto;
+    padding: 1.2em;
+    //border: solid 0.1em;
+}
+section .new-art .h-art p{
+    display: inline-block;
+    width: 49%;
+    margin: 1.0em auto;
+    //border: solid 0.1em;
+}
+section .new-art .h-art p label{}
+section .new-art .h-art p .lab{
+    display: inline-block;
+    width: 20%;
+    //border: solid 0.1em;
+}
+section .new-art .h-art p input{
+    width: 70%;
+    margin: 0.3em auto;
+}
+section .new-art .h-art p select{
+    width: 60%;
+}
+section .new-art hgroup{
+    float: left;
+    width: 100%;
+    margin: 1.4em auto;
+    padding: 0;
+    border: 0;
+}
+section .new-art hgroup textarea{
+    width: 100%;
+    margin: auto;
+    //border: solid 0.1em red;
+}
+section .new-art .p-resume{
+   // display: none;
+    width: 100%;
+    margin: auto;
+    padding: 0;
+    //border: solid 0.1em;
+}
+section .new-art .p-resume textarea{
+    width: 99.1%;
+    height: 3.6em;
+    margin: auto;
+    padding: 0.4em;
+    box-shadow: 0.0em 0.0em 0.1em rgba(0,0,0,0.1);
+    //border-bottom:solid #D7D7D7 1.6em;
+}
+section .new-art input[type='submit']{
+    position: relative;
+    z-index: 10;
+    width: 15%;
+}
+section hgroup .ajour{
+    display: none;
+}
+footer
+{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    right:0;
+    height: 2.4em;
+    
+    
+}
+//--- Une font chrgé sur la racine ----
+//------ Capsuula -----------
+@font-face {
+    font-family: "Capsuula";
+    src: url('fonts/Capsuula.ttf');
+}
+@font-face {
+    font-family: "Capsuula";
+    font-style: italic;
+    src: url('fonts/Capsuula.ttf');
+}
+@font-face {
+    font-family: "Capsuula";
+    font-weight: bold;
+    src: url('fonts/Capsuula.ttf');
+}
+//---- Eurostile ---------
+@font-face {
+    font-family: "Eurostile";
+    src: url('fonts/eurostile.ttf');
+}
+@font-face {
+    font-family: "Eurostile";
+    font-style: italic;
+    src: url('fonts/eurostile.ttf');
+}
+@font-face {
+    font-family: "Eurostile";
+    font-weight: bold;
+    src: url('fonts/eurostile.ttf');
+}
+//---- Calibri ---------
+@font-face {
+    font-family: "Calibri";
+    src: url('fonts/Calibri.ttf');
+}
+@font-face {
+    font-family: "Calibri";
+    font-style: italic;
+    src: url('fonts/Calibri.ttf');
+}
+@font-face {
+    font-family: "Calibri";
+    font-weight: bold;
+    src: url('fonts/Calibri.ttf');
+}

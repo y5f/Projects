@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+   <database name="aviaco" defaultIdMethod="aviaco">
+       <table name="marque" phpName="Marque" idMethod="native">
+           <column name="id" require="true" type="integer" autoIncrement="true" primaryKey="true" phpName="ID"/>
+           <column name="marque" type="varchar" size="100" required="true" phpName="Marque"/>
+           <unique>
+               <unique-column name="marque"/>
+           </unique>
+       </table>
+       <table name="modele" phpName="Model" idMethod="native">
+            <column name="id" require="true" type="integer" autoIncrement="true" primaryKey="true" phpName="ID"/>
+            <column name="modele" type="varchar" size="100" require="true" phpName="Modele"/>
+            <column name="marque_FK" type="varchar" size="100" require="true" phpName="Marque_FK"/>
+            <foreign-key foreignTable="marque" phpName="Marque" onUpdate="cascade" onDelete = "cascade" refPhpName="Modele"> 
+                <reference local="marque_FK" foreign="marque"/>
+            </foreign-key>
+            <unique>
+               <unique-column name="marque_FK"/>
+               <unique-column name="modele"/>
+           </unique>
+       </table>
+       <table name="appareil" phpName="Appareil" idMethod="native">
+           <column name="id" require="true" type="integer" autoIncrement="true" primaryKey="true" phpName="ID"/>
+           <column name="idAp" type="varchar" size="100" phpName="IdAppareil" require="true"/>
+           <column name="nom_app" type="varchar" size="100" />
+           <column name="modele_PK" type="varchar" size="100" require="true" primaryKey="true" phpName="Modele_PK"/>
+           <column name="marque_PK" type="varchar" size="100" require="true" primaryKey="true" phpName="Marque_PK"/>
+           <foreign-key foreignTable="marque" phpName="Marque" onUpdate="cascade" onDelete="cascade" refPhpName="Appareil">
+               <reference local="marque_PK" foreign="marque"/>
+           </foreign-key>
+           <foreign-key foreignTable="modele" phpName="Modele" onUpdate="cascade" onDelete="cascade" refPhpName="Appareil">
+               <reference local="modele_PK" foreign="modele"/>
+           </foreign-key>
+           <unique>
+               <unique-column name="idAp"/>
+           </unique>
+       </table>
+       <table name="piece" phpName="Piece" idMethod="native">
+           <column name="id" require="true" type="integer" autoIncrement="true" primaryKey="true" phpName="ID"/>
+           <column name="reference" type="varchar" size="100" require="true" primaryKey="true" phpName="Reference"/>
+           <column name="description" type="varchar" size="100" require="true" phpName="Description"/>
+           <unique>
+               <unique-column name="reference"/>
+           </unique>
+       </table>
+       <table name="piece_appareil" phpName="PieceApp" idMethod="native">
+           <column name="id" require="true" type="integer" autoIncrement="true" primaryKey="true" phpName="ID"/>
+           <column name="idAp_PK" type="varchar" size="100" require="true" phpName="IdAp_PK"/>
+           <column name="modele_PK" type="varchar" size="100" requier="true" phpName="Modele_PK"/>
+           <column name="marque_PK" type="varchar" size="100" requier="true" phpName="Marque_PK"/>
+           <column name="reference_PK" type="varchar" size="100" requier="true" phpName="Reference_PK"/>
+           <foreign-key foreignTable="appareil" phpName="Appareil" onUpdate="cascade" onDelete="cascade" refPhpName="PieceApp">
+               <reference local="idAp_PK" foreign="idAp"/>
+           </foreign-key>
+           <foreign-key foreignTable="modele" phpName="Modele" onUpdate="cascade" onDelete="cascade" refPhpName="PieceApp">
+               <reference local="modele_PK" foreign="modele"/>
+           </foreign-key>
+           <foreign-key foreignTable="marque" phpName="Marque" onUpdate="cascade" onDelete="cascade" refPhpName="PieceApp">
+               <reference local="marque_PK" foreign="marque"/>
+           </foreign-key>
+           <foreign-key foreignTable="piece" phpName="Piece" onUpdate="cascade" onDelete="cascade" refPhpName="PieceApp">
+               <reference local="reference_PK" foreign="reference"/>
+           </foreign-key>
+       </table>
+       <table name="photo_piece" phpName="Photopiece" idMethod="native">
+           <column name="id" require="true" type="integer" autoIncrement="true" primaryKey="true" phpName="ID"/>
+           <column name="url_photo" type="varchar" size="200" require="true" phpName="Piecephoto"/>
+           <column name="date_photo" type="timestamp" require="true" phpName="Datephoto"/>
+           <column name="titre_photo" type="varchar" size="100" phpName="Titre"/>
+           <column name="commentaire" type="longvarchar" phpName="Commentaire"/>
+           <column name="reference_FK" type="varchar" size="100" require="true" phpName="Reference_FK"/>
+           <foreign-key foreignTable="piece" phpName="Piece" onUpdate="cascade" onDelete="cascade" refPhpName="Photopiece">
+               <reference local="reference_FK" foreign="reference"/>
+           </foreign-key>
+       </table>
+       <table name="photo_appareil" phpName="Photoappareil" idMethod="native">
+           <column name="id" require="true" type="integer" autoIncrement="true" primaryKey="true" phpName="ID"/>
+           <column name="url_photo" type="varchar" size="200" require="true" phpName="Photo"/>
+           <column name="date_photo" type="timestamp" require="true" phpName="Datephoto"/>
+           <column name="titre_photo" type="varchar" size="100" phpName="Titre"/>
+           <column name="commentaire" type="longvarchar" phpName="Commentaire"/>
+           <column name="etat" type="boolean" phpName="Etat"/>
+           <column name="idAp_PK" type="varchar" size="100" require="true" primaryKey="true" phpName="IdAp_PK"/>
+           <column name="modele_PK" type="varchar" size="100" require="true" primaryKey="true" phpName="modele_PK"/>
+           <column name="marque_PK" type="varchar" size="100" require="true" primaryKey="true" phpName="marque_PK"/>
+           <foreign-key foreignTable="appareil" phpName="Appareil" onUpdate="cascade" onDelete="cascade" refPhpName="Photoappareil">
+               <reference local="idAp_PK" foreign="idAp"/>
+           </foreign-key>
+           <foreign-key foreignTable="modele" phpName="Modele" onUpdate="cascade" onDelete="cascade" refPhpName="Photoappareil">
+               <reference local="modele_PK" foreign="modele"/>
+           </foreign-key>
+           <foreign-key foreignTable="marque" phpName="Marque" onUpdate="cascade" onDelete="cascade" refPhpName="Photoappareil">
+               <reference local="marque_PK" foreign="marque"/>
+           </foreign-key>
+       </table>
+       <table name="partenaire" phpName="Partenaire" idMethod="native">
+           <column name="part_id" type="integer" require="true" primaryKey="true" autoIncrement="true" phpName="Partenaire"/>
+           <column name="part_nom" type="varchar" size="200" require="true" phpName="Nompartenaire"/>
+           <column name="part_adresse" type="varchar" size="200" require="true" phpName="Adresses"/>
+           <column name="part_tel" type="varchar" size="15" phpName="Telephone"/>
+           <column name="part_mail" type="varchar" size="100" phpName="Email"/>
+           <column name="part_logo" type="varchar" size="100" phpName="Logo"/>
+       </table>
+       <table name="partenaire_piece" phpName="Partenairepiece" idMethod="native">
+           <column name="id" require="true" type="integer" autoIncrement="true" primaryKey="true" phpName="ID"/>
+           <column name="quantite" type="integer" phpName="Quantite"/>
+           <column name="prix_achat" type="double" phpName="Prixachat"/>
+           <column name="prix_vente" type="double" phpName="Prixvente"/>
+           <column name="date_enreg" type="timestamp" phpName="Dateenregistrement"/>
+           <column name="reference_PK" type="varchar" size="100" require="true" phpName="Reference_PK"/>
+           <column name="part_id_PK" type="integer" require="true" phpName="Partenaire_PK"/>
+           <foreign-key foreignTable="piece" phpName="Piece" onUpdate="cascade" onDelete="cascade" refPhpName="Partenairepiece">
+               <reference local="reference_PK" foreign="reference"/>
+           </foreign-key>
+           <foreign-key foreignTable="partenaire" phpName="Partenaire" onUpdate="cascade" onDelete="cascade" refPhpName="Partenairepiece">
+               <reference local="part_id_PK" foreign="part_id"/>
+           </foreign-key>
+       </table>
+       <table name="document" phpName="Document" idMethod="native">
+           <column name="doc_num" type="integer" require="true" primaryKey="true" autoIncrement="true" phpName="Docnumber"/>
+           <column name="doc_lien" type="varchar" size="100" phpName="Doc"/>
+           <column name="reference_FK" type="varchar" size="100" require="true" phpName="Reference_FK"/>
+           <column name="part_id_FK" type="integer" size="100" require="true" phpName="Part_id_FK"/>
+           <column name="date_enreg_FK" type="timestamp" require="true" phpName="Dateenreg_FK"/>
+           <foreign-key foreignTable="partenaire_piece" phpName="Partenairepiece" onUpdate="cascade" onDelete="cascade" refPhpName="Doc">
+               <reference local="date_enreg_FK" foreign="date_enreg"/>
+           </foreign-key>
+           <foreign-key foreignTable="piece" phpName="Piece" onUpdate="cascade" onDelete="cascade" refPhpName="Doc">
+               <reference local="reference_FK" foreign="reference"/>
+           </foreign-key>
+           <foreign-key foreignTable="partenaire" phpName="Partenaire" onUpdate="cascade" onDelete="cascade" refPhpName="Doc">
+               <reference local="part_id_FK" foreign="part_id"/>
+           </foreign-key>
+       </table>
+       <table name="depot" phpName="Depot" idMethod="native">
+           <column name="id_depot" type="integer" require="true" primaryKey="true" autoIncrement="true" phpName="Iddepot"/>
+           <column name="depot_adresse" type="varchar" size="200" require="true" phpNme="Adressedepot"/>
+       </table>
+       <table name="partenaire_depot" phpName="Depotpartenaire" idMethod="native">
+           <column name="id" require="true" type="integer" autoIncrement="true" primaryKey="true" phpName="ID"/>
+           <column name="part_id_PK" type="integer" require="true" phpName="Part_id_PK"/>
+           <column name="id_depot_PK" type="integer" require="true" phpName="Id_depot_PK"/>
+           <foreign-key foreignTable="partenaire" phpName="Partenaire" onUpdate="cascade" onDelete="cascade" refPhpName="Depotpartenaire">
+               <reference local="part_id_PK" foreign="part_id"/>
+           </foreign-key>
+           <foreign-key foreignTable="depot" phpName="Depot" onUpdate="cascade" onDelete="cascade" refPhpName="Depotpartenaire">
+               <reference local="id_depot_PK" foreign="id_depot"/>
+           </foreign-key>
+       </table>
+       <table name="stock" phpName="Stock" idMethod="native">
+           <column name="stock_id" type="integer" require="true" primaryKey="true" autoIncrement="true" phpName="Id_stock"/>
+           <column name="date_arrivee" type="timestamp" require="true" phpName="Datearrivee"/>
+           <column name="date_depart" type="timestamp" require="true" phpName="Datedepart"/>
+           <column name="reference_PK" type="varchar" size="100" require="true" phpName="Reference_PK"/>
+           <foreign-key foreignTable="piece" phpName="Piece" onUpdate="cascade" onDelete="cascade" refPhpName="Stock">
+               <reference local="reference_PK" foreign="reference"/>
+           </foreign-key>
+       </table>
+       <table name="stock_depot" phpName="Stockdepot" idMethod="native">
+           <column name="id" require="true" type="integer" autoIncrement="true" primaryKey="true" phpName="ID"/>
+           <column name="stock_id_PK" type="integer" require="true" phpName="Stock_id_PK"/>
+           <column name="reference_PK" type="varchar" size="100" require="true" phpName="Reference_PK"/>
+           <column name="id_depot_PK" type="integer" require="true" phpName="Id_depot_PK"/>
+           <foreign-key foreignTable="stock" phpName="Stock" onUpdate="cascade" onDelete="cascade" refPhpName="Stockdepot">
+               <reference local="stock_id_PK" foreign="stock_id"/>
+           </foreign-key>
+           <foreign-key foreignTable="piece" phpName="Piece" onUpdate="cascade" onDelete="cascade" refPhpName="Stockdepot">
+               <reference local="reference_PK" foreign="reference"/>
+           </foreign-key>
+           <foreign-key foreignTable="depot" phpName="Depot" onUpdate="cascade" onDelete="cascade" refPhpName="Stockdepot">
+               <reference local="id_depot_PK" foreign="id_depot"/>
+           </foreign-key>
+       </table>
+       <table name="employe" phpName="Employe" idMethod="native">
+           <column name="id_emp" type="varchar" size="25" require="true" primaryKey="true" phpName="IdEmploye"/>
+           <column name="nom" type="varchar" size="100" require="true" phpName="Nom"/>
+           <column name="prenom" type="varchar" size="100" require="true" phpName="Prenoom"/>
+           <column name="adresses" type="varchar" size="200" phpName="Adresses"/>
+           <column name="cp" type="integer" phpName="Codepostal"/>
+           <column name="fonction" type="varchar" size="100" phpName="Fonction"/>
+           <column name="telephone" type="varchar" size="100" phpName="Telephone"/>
+           <column name="email" type="varchar" size="100" phpName="Email"/>
+           <column name="passe" type="varchar" size="200" phpName="Passe"/>
+           <column name="acces" type="char" require="true" phpName="NiveaAcces"/>
+           <column name="avatard" type="varchar" size="200" phpName="Avatard"/>
+           <column name="etat" type="boolean" phpName="Etat"/>
+       </table>
+       <table name="session" phpName="Session" idMethod="native">
+           <column name="IDS" type="integer" require="true" primaryKey="true" autoIncrement="true" phpName="IDS"/>
+           <column name="date_connexion" type="timestamp" require="true" phpName="Datesession"/>
+           <column name="id_emp_FK" type="varchar" size="25" require="true" phpName="Id_emp_FK"/>
+           <foreign-key foreignTable="employe" phpName="Employe" onUpdate="cascade" onDelete="cascade" refPhpName="Session">
+               <reference local="id_emp_FK" foreign="id_emp"/>
+           </foreign-key>
+       </table>
+       <table name="cv" phpName="CV" idMethod="native">
+           <column name="cv_num" type="integer" require="true" autoIncrement="true" primaryKey="true" phpName="Numcv"/>
+           <column name="id_emp_FK" type="varchar" size="25" require="true" phpName="Id_emp_FK"/>
+           <column name="cv_url" type="varchar" size="200" require="true" phpName="VC"/>
+           <foreign-key foreignTable="employe" phpName="Employe" onUpdate="cascade" onDelete="cascade" refPhpName="CV">
+               <reference local="id_emp_FK" foreign="id_emp"/>
+           </foreign-key>
+       </table>
+       <table name="infos_box" phpName="Infos" idMethod="native">
+           <column name="ibox_id" type="integer" require="true" primaryKey="true" autoIncrement="true" phpName="IDInfos"/>
+           <column name="titre" type="varchar" size="200" phpName="Titre"/>
+           <column name="logo" type="varchar" size="200" phpName="Logo"/>
+           <column name="slogan" type="varchar" size="200" phpName="Slogan"/>
+           <column name="telephone" type="varchar" size="15" phpName="Telephone"/>
+           <column name="mail" type="varchar" size="100" phpName="Email"/>
+           <column name="num_rue" type="varchar" size="5" phpName="Numrue"/>
+           <column name="nom_rue" type="varchar" size="100" phpName="Nomrue"/>
+           <column name="cp" type="varchar" size="5" phpName="Codepostal"/>
+           <column name="ville" type="varchar" size="40" phpName="Ville"/>
+           <column name="txt_slider" type="varchar" size="255" phpName="Textslider"/>
+       </table>
+       <table name="media" phpName="Media" idMethod="native">
+           <column name="media_num" type="integer" require="true" autoIncrement="true" primaryKey="true" phpName="Medianum"/>
+           <column name="media_date" type="timestamp" require="true" phpName="Mediadate"/>
+           <column name="description" type="varchar" size="200" require="true" phpName="Description"/>
+           <column name="media_url" type="varchar" size="200" require="true" phpName="URL"/>
+           <column name="commentaire" type="varchar" size="200" require="true" phpName="Commentaire"/>
+           <column name="cat_FK" type="varchar" size="100" require="true" phpName="Categorie_FK"/>
+           <column name="s_cat_FK" type="varchar" size="100" require="true" phpName="Souscategorie_FK"/>
+           <foreign-key foreignTable="categorie" phpName="Categorie" onUpdate="cascade" onDelete="cascade" refPhpName="Media">
+               <reference local="cat_FK" foreign="categorie"/>
+           </foreign-key>
+           <foreign-key foreignTable="sous_categorie" phpName="Souscategorie" onUpdate="cascade" onDelete="cascade" refPhpName="Media">
+               <reference local="s_cat_FK" foreign="sous_categorie"/>
+           </foreign-key>
+       </table>
+       <table name="categorie" phpName="Categorie" idMethod="native">
+           <column name="id" require="true" type="integer" autoIncrement="true" primaryKey="true" phpName="ID"/>
+           <column name="categorie" type="varchar" size="100" require="true" phpName="Categorie"/>
+           <column name="commentaire" type="varchar" size="255" phpName="Commentaire" />
+           <column name="niveau" type="integer" size="5" phpName="Niveau" />
+           <column name="ordre" type="integer" size="5" phpName="Ordre" />
+           <column name="url" type="varchar" size="200" phpName="URL" />
+           <unique>
+               <unique-column name="categorie"/>
+               <unique-column name="niveau"/>
+           </unique>
+       </table>
+       <table name="sous_categorie" phpName="Souscategorie" idMethod="native">
+           <column name="id" require="true" type="integer" autoIncrement="true" primaryKey="true" phpName="ID"/>
+           <column name="sous_categorie" type="varchar" size="100" require="true" phpName="Souscategorie"/>
+           <column name="id_categorie_FK" type="integer" require="true" phpName="IDCategorie_FK"/>
+           <column name="commentaire" type="varchar" size="255" phpName="Commentaire"/>
+           <column name="ordre" type="integer" size="5" phpName="Ordre" />
+           <column name="url" type="varchar" size="200" phpName="URL" />
+           <foreign-key foreignTable="categorie" phpName="Categorie" onUpdate="cascade" onDelete="cascade" refPhpName="Souscategorie">
+               <reference local="id_categorie_FK" foreign="id"/>
+           </foreign-key>
+           <unique>
+               <unique-column name="id_categorie_FK"/>
+               <unique-column name="sous_categorie"/>
+           </unique>
+       </table>
+      
+       <table name="article" phpName="Article" idMethod="native">
+           <column name="art_num" type ="integer" require="true" primaryKey="true" autoIncrement="true" phpName="Numart"/>
+           <column name="titre" type="varchar" size="255" require="true" pnpName="Titre"/>
+           <column name="id_emp_FK" type="varchar" size="25" require="true" pnpName="Auteur"/>
+           <column name="date_edit" type="timestamp" require="true" pnpName="DateEdit"/>
+           <column name="contenu" type="longvarchar" pnpName="Contenu"/>
+           <column name="resume" type="longvarchar" pnpName="Resume"/>
+           <column name="img_laune" type="longvarchar" pnpName="Launeimg"/>
+           <column name="url" type="varchar" size="200" pnpName="URL"/>
+           <column name="categorie_FK" type="varchar" size="100" required="true" phpName="Categorie_FK"/>
+           <column name="sous_categorie_FK" type="varchar" size="100" required="true" phpName="Souscategorie_FK"/>
+           <foreign-key foreignTable="employe" phpName="Employe" onUpdate="cascade" onDelete="cascade" refPhpName="Article">
+               <reference local="id_emp_FK" foreign="id_emp"/>
+           </foreign-key>
+           <foreign-key foreignTable="categorie" phpName="Categorie" onUpdate="cascade" onDelete="cascade" refPhpName="Article">
+               <reference local="categorie_FK" foreign="categorie"/>
+           </foreign-key>
+           <foreign-key foreignTable="sous_categorie" phpName="Souscategorie" onUpdate="cascade" onDelete="cascade" refPhpName="Article">
+               <reference local="sous_categorie_FK" foreign="sous_categorie"/>
+           </foreign-key>
+       </table>
+       <table name="publication" phpName="Publication" idMethod="native">
+           <column name="id" require="true" type="integer" autoIncrement="true" primaryKey="true" phpName="ID"/>
+           <column name="date_pub" type="timestamp" require="true" phpName="Datepublication"/>
+           <column name="etat" type="boolean" require="true" phpName="Etat"/>
+           <column name="slider" type="boolean" require="true" phpName="isSlider"/>
+           <column name="art_num_PK" type="integer" require="true" phpName="Art_num_PK"/>
+           <foreign-key foreignTable="article" phpName="Article" onUpdate="cascade" onDelete="cascade" refPhpName="Publication">
+               <reference local="art_num_PK" foreign="art_num"/>
+           </foreign-key>
+       </table>
+       <table name="message" phpName="Message" idMethod="native">
+           <column name="id_msg" type="integer" require="true" autoIncrement="true" primaryKey="true" phpName="Idmsg"/>
+           <column name="objet" type="varchar" size="255" phpName="Objet" />
+           <column name="nom_visiteur" type="varchar" size="100" phpName="Visiteur" />
+           <column name="mail_visiteur" type="varchar" size="100" phpName="Email" />
+           <column name="telephone" type="varchar" size="15" phpName="Telephone" />
+           <column name="msg" type="longvarchar" phpName="Msg" />
+           <column name="etat" type="boolean" phpName="Etat" />
+       </table>
+        <table name="menus" phpName="Menus" idMethod="native">
+           <column name="id" require="true" type="integer" autoIncrement="true" primaryKey="true" phpName="ID"/>
+           <column name="menu" type="varchar" size="100" require="true" phpName="Menu"/>
+           <column name="commentaire" type="varchar" size="255" phpName="Commentaire" />
+           <column name="niveau" type="integer" size="5" phpName="Niveau" />
+           <column name="ordre" type="integer" size="5" phpName="Ordre" />
+           <column name="url" type="varchar" size="200" phpName="URL" />
+           <unique>
+               <unique-column name="menu"/>
+               <unique-column name="niveau"/>
+           </unique>
+       </table>
+       <table name="sous_menu" phpName="Sousmenu" idMethod="native">
+           <column name="id" require="true" type="integer" autoIncrement="true" primaryKey="true" phpName="ID"/>
+           <column name="sous_menu" type="varchar" size="100" require="true" phpName="Sousmenu"/>
+           <column name="id_menu_FK" type="integer" require="true" phpName="IDMenu_FK"/>
+           <column name="commentaire" type="varchar" size="255" phpName="Commentaire"/>
+           <column name="ordre" type="integer" size="5" phpName="Ordre" />
+           <column name="url" type="varchar" size="200" phpName="URL" />
+           <foreign-key foreignTable="menus" phpName="Menus" onUpdate="cascade" onDelete="cascade" refPhpName="Sousmenu">
+               <reference local="id_menu_FK" foreign="id"/>
+           </foreign-key>
+           <unique>
+               <unique-column name="id_menu_FK"/>
+               <unique-column name="sous_menu"/>
+           </unique>
+       </table>
+       <table name="widget" phpName="Widget" idMethod="native">
+           <column name="id" type="integer" require="true" primaryKey="true" autoIncrement="true" phpName="ID"/>
+           <column name="num_bloc" type="integer" require="true" phpName="Numbloc"/>
+           <column name="num_art" type="integer" require="true" phpName="Numarticle"/>
+           <foreign-key foreignTable="article" phpName="Article" onUpdate="cascade" onDelete="cascade" refPhpName="Widget">
+               <reference local="num_art" foreign="art_num"/>
+           </foreign-key>
+       </table>
+       
+</database>

@@ -1,0 +1,42 @@
+mcu = [[26, 59, 64, 122, 69, 78, 12, 243], [26, 59, 64, 122, 69, 78, 12, 243], [26, 59, 64, 122, 69, 78, 12, 243], [26, 59, 64, 122, 69, 78, 12, 243], [26, 72, 64, 22, 169, 78, 12, 43], [26, 59, 64, 12, 69, 78, 12, 24], [126, 39, 64, 122, 69, 78, 212, 243], [239, 59, 64, 6, 69, 78, 12, 3]]
+dct = Array.new(8) {Array.new(8)}
+dctT = Array.new(8) {Array.new(8)}
+img = Array.new(8) {Array.new(8)}
+for i in 0...8
+  for j in 0...8
+    if i ==0
+      dct[i][j] = 1.to_f/Math::sqrt(8)
+      dctT[j][i] = 1.to_f/Math::sqrt(8)
+    else
+      dct[i][j] = Math::sqrt(2.to_f/8)*Math::cos(Math::PI*(i)*(2*(j+1))/(2*8))
+      dctT[j][i] = Math::sqrt(2.to_f/8)*Math::cos(Math::PI*(i)*(2*(j+1))/(2*8))
+    end
+  end
+end
+for i in 0...8
+  for j in 0...8
+    img[i][j] = (dct[i][j]*mcu[i][j]*dctT[i][j]).to_i
+  end
+end
+
+for i in 0...8
+  for j in 0...8
+  print "#{dct[i][j]} "
+  end
+  print "\n"
+end
+print "\n"
+for i in 0...8
+  for j in 0...8
+  print "#{dctT[i][j]} "
+  end
+  print "\n"
+end
+print "\n"
+for i in 0...8
+  for j in 0...8
+    print "#{img[i][j]} "
+  end
+  print "\n"
+end
+print "\n"
